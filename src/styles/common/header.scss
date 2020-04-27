@@ -1,0 +1,96 @@
+@import "../utils/variables";
+@import "../mixins/media";
+@import "../mixins/btn";
+@import "../mixins/wrapper";
+@import "../mixins/substrate";
+@import "../mixins/text";
+
+header {
+  width: 100%;
+  background-color: linear-gradient(to top, #0092e6, #1c9ef5, #0077e6);
+  flex: 0 0 auto;
+}
+
+.header-top {
+  padding-left: 310px;
+  margin-bottom: 55px;
+  h1 {
+    max-width: 600px;
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: 600;
+  }
+}
+
+.header-bottom {
+  padding: 0 80px;
+
+  h2 {
+    @include substrate();
+    margin-bottom: 20px;
+    font-family: $fontFamilySub;
+    font-size: 57px;
+    font-weight: 800;
+  }
+
+  p {
+    position: relative;
+    max-width: 479px;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #e6e6e6;
+    &::after {
+      position: absolute;
+      content: '—';
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 35px 80px 35px 80px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 60px 0 0;
+    list-style: none;
+
+    li {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-family: $fontFamilyDefault;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.14;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .btns {
+    .btn {
+      @include btn();
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

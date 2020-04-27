@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 0 80px;
+    .logo {
+        width: 250px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    nav {
+        flex-grow: 1;
+        padding-right: 0;
+        ul {
+            li {
+                a {
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

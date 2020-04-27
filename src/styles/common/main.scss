@@ -1,0 +1,28 @@
+@import "../mixins/wrapper";
+@import "../mixins/substrate";
+
+.main {
+    @include wrapper();
+    flex: 1 0 auto;
+}
+
+.section {
+    margin-top: 35px;
+    text-align: center;
+    h2 {
+        @include substrate();
+        margin-bottom: 30px;
+        font-size: 46px;
+        font-weight: 600;
+    }
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+        width: 390px;
+        @include substrate-block();
+    }
+}

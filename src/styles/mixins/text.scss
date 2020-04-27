@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+@mixin text-shadow {
+    background-color: $textGradient;
+    text-shadow: $textShadow;
+    line-height: normal;
+    letter-spacing: normal;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+@mixin text-slider {
+    font-size: 28px;
+    font-weight: bold;
+    color: #51b532;
+}

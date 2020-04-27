@@ -1,0 +1,18 @@
+$mediaWidthMobile: 320px;
+$mediaWidthTablet: 768px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1366px;
+$mediaWidthDekstop: 1620px;
+
+$fontFamilyDefault: 'Montserrat';
+$fontFamilySub: 'Gilroy';
+
+$headersSubstrateBackground: linear-gradient(to top, #e66200, #fc9447, #e66200);
+$headersSubstrateTextColor: #ffffff;
+
+$btnBackgroundGradient: linear-gradient(to top, #e66200, #fc9447, #e66200);
+$btnBoxshadow: 0px 25px 50px 0 rgba(230, 98, 0, 0.4), inset 0px -3px 0 0 #9c5000;
+$btnTextColor: #ffffff;
+
+$textShadow: 0px 25px 50px rgba(230, 98, 0, 0.4), 0px -2px 0 #9c5000;
+$textGradient: linear-gradient(to top, #e66200, #fc9447, #e66200), linear-gradient(to bottom, #000000, #000000);

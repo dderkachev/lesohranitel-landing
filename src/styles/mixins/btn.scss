@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+@mixin btn {
+    display: inline-block;
+    padding: 15px;
+    font-family: $fontFamilySub;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $btnTextColor;
+    background-color: $btnBackgroundGradient;
+    box-shadow: $btnBoxshadow;
+    border-radius: 8px;
+}
