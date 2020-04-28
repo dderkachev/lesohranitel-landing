@@ -12,3 +12,25 @@
     box-shadow: $btnBoxshadow;
     border-radius: 8px;
 }
+
+@mixin btn--link {
+    position: relative;
+    font-family: $fontFamilySub;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 2.77;
+    color: $btnLinkTextColor;
+    padding-right: 20px;
+    text-transform: uppercase;
+    &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: calc(50% - 6px);
+        width: 7px;
+        height: 11px;
+        background-color:  #fc9447;
+        background: url("../../img/next.png") center no-repeat;
+        background-size: contain;
+    }
+}

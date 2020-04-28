@@ -4,27 +4,42 @@
 @import "../mixins/wrapper";
 @import "../mixins/substrate";
 @import "../mixins/text";
+@import "../mixins/slider";
 
 header {
+  @include wrapper();
   width: 100%;
-  background-color: linear-gradient(to top, #0092e6, #1c9ef5, #0077e6);
   flex: 0 0 auto;
+  &::after {
+    position: absolute;
+    content: '';
+    background: url('../img/background-top.png') top center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 1660px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
 }
 
 .header-top {
-  padding-left: 310px;
+  //padding-left: 310px;
   margin-bottom: 55px;
   h1 {
+    margin-left: 230px;
     max-width: 600px;
     color: #ffffff;
+    font-family: $fontFamilySub;
     font-size: 46px;
     font-weight: 600;
   }
 }
 
 .header-bottom {
-  padding: 0 80px;
-
+  //padding: 0 80px;
+  margin-bottom: 35px;
   h2 {
     @include substrate();
     margin-bottom: 20px;
@@ -32,12 +47,16 @@ header {
     font-size: 57px;
     font-weight: 800;
   }
+  @include slider-bg();
+}
 
+.header-bottom__description {
   p {
     position: relative;
-    max-width: 479px;
-    margin-bottom: 25px;
+    max-width: 576px;
+    margin-bottom: 30px;
     padding-left: 30px;
+    font-family: $fontFamilyDefault;
     font-size: 19px;
     font-weight: 400;
     color: #e6e6e6;
@@ -50,10 +69,135 @@ header {
   }
 }
 
+.header-bottom__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+
+  .info-block {
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+    padding: 20px;
+    padding-top: 75px;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: 10px;
+      left: 10px;
+      bottom: -10px;
+      height: 10px;
+      border-radius: 0 0 5px 5px;
+      background-color: #d6d4d2;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 5px;
+      right: 5px;
+      left: 5px;
+      bottom: 5px;
+      border-radius: 4px;
+      border: solid 1px #00a100;
+    }
+
+    p {
+      font-family: $fontFamilySub;
+      font-size: 17px;
+      text-transform: uppercase;
+
+      span {
+        @include text-shadow();
+        display: block;
+        font-family: $fontFamilySub;
+        font-size: 44px;
+        font-weight: 800;
+        line-height: normal;
+      }
+    }
+  }
+
+  .info-block--mr {
+    margin-right: 0;
+  }
+
+  .info-block--document {
+    align-self: flex-end;
+    max-width: 436px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    p {
+      position: relative;
+      padding: 0 0 0 10px;
+      font-family: $fontFamilyDefault;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: -17px;
+        width: 16px;
+        height: 21px;
+        background: url('../../img/paper.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &::after {
+      top: -12px;
+      right: unset;
+      bottom: unset;
+      left: 15px;
+      border-radius: 0;
+      border-bottom: 12px solid #fff;
+      border-left: 10px solid transparent;
+      background: transparent;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .btn {
+    @include btn();
+    position: relative;
+    margin-left: 30px;
+    padding: 20px;
+    padding-right: 40px;
+    white-space: nowrap;
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(50% - 6px);
+      right: 15px;
+      width: 12px;
+      height: 12px;
+      background: url("../../img/down-arrow.png") center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.slider-info {
+  &__slide {
+    padding: 25px 0;
+  }
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
-  padding: 35px 80px 35px 80px;
+  padding: 35px 0;
 
   ul {
     display: flex;
@@ -86,10 +230,31 @@ nav {
   .btns {
     .btn {
       @include btn();
+      position: relative;
       margin-right: 15px;
+      padding-left: 35px;
+      &::after {
+        position: absolute;
+        content: '';
+        top: calc(50% - 7px);
+        left: 15px;
+        width: 12px;
+        height: 12px;
+      }
+
+      &:first-child {
+        &::after {
+          background: url("../../img/phone.png") center no-repeat;
+          background-size: contain;
+        }
+      }
 
       &:last-child {
         margin-right: 0;
+        &::after {
+          background: url("../../img/logout.png") center no-repeat;
+          background-size: contain;
+        }
       }
     }
   }

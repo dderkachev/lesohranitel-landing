@@ -1,10 +1,14 @@
+@import "../mixins/wrapper";
+
 footer {
+    @include wrapper();
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    padding: 0 80px;
+    padding: 20px 0;
     .logo {
-        width: 250px;
+        width: 101px;
+        height: 110px;
         img {
             width: 100%;
             height: auto;

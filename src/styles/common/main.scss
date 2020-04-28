@@ -1,5 +1,7 @@
+@import "../utils/variables";
 @import "../mixins/wrapper";
 @import "../mixins/substrate";
+@import "../mixins/slider.scss";
 
 .main {
     @include wrapper();
@@ -9,11 +11,44 @@
 .section {
     margin-top: 35px;
     text-align: center;
+
     h2 {
         @include substrate();
         margin-bottom: 30px;
+        font-family: $fontFamilySub;
         font-size: 46px;
         font-weight: 600;
+    }
+
+    h3 {
+        display: inline-block;
+        max-width: 1010px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: $fontFamilySub;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    &:last-child {
+        margin-bottom: 50px;
+    }
+
+    &--slider {
+        padding: 0 35px;
+    }
+
+    @include slider();
+}
+
+.slider {
+    &-views {
+        &__slide {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }
 
@@ -24,5 +59,62 @@
     &__item {
         width: 390px;
         @include substrate-block();
+        p {
+            font-family: $fontFamilyDefault;
+            font-size: 17px;                  
+            line-height: 1.56;                
+            text-align: center;
+            color: #212121;
+        }
+    }
+    &__item--large {
+        max-width: 910px;
+        width: 100%;
+        background-color: #ffffff;
+        border: solid 4px #008b00;
+        box-sizing: border-box;
+        a {
+            @include btn--link();
+        }
+        &::after {
+            display: none;
+        }
+        @include media-laptop() {
+            max-width: 835px;
+        }
+    }
+    &__item--align {
+        align-self: flex-start;
+    }
+}
+
+.video {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+        width: 390px;
+        margin-bottom: 18px;
+        padding: 10px 15px;
+        font-family: $fontFamilyDefault;
+        font-size: 18.5px;
+        color: #ffffff;
+        border-radius: 10px;
+        background: $subColor;
+        &-header {
+            font-family: $fontFamilyDefault;
+            font-size: 21px;
+            font-weight: bold;
+        }
+        &-img--mt {
+            margin-top: -10px;
+        }
+    }
+    &__item--default {
+        background: $defaultColor;
+    }
+    &__item--large {
+        max-width: 620px;
+        width: 100%;
     }
 }

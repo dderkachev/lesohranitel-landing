@@ -7,12 +7,16 @@ $mediaWidthDekstop: 1620px;
 $fontFamilyDefault: 'Montserrat';
 $fontFamilySub: 'Gilroy';
 
+$defaultColor: linear-gradient(to top, #e66200, #fc9447, #e66200);
+$subColor: linear-gradient(to top, #00a100, #05df00, #00a100);
+
 $headersSubstrateBackground: linear-gradient(to top, #e66200, #fc9447, #e66200);
 $headersSubstrateTextColor: #ffffff;
 
 $btnBackgroundGradient: linear-gradient(to top, #e66200, #fc9447, #e66200);
 $btnBoxshadow: 0px 25px 50px 0 rgba(230, 98, 0, 0.4), inset 0px -3px 0 0 #9c5000;
 $btnTextColor: #ffffff;
+$btnLinkTextColor: #dd843c;
 
 $textShadow: 0px 25px 50px rgba(230, 98, 0, 0.4), 0px -2px 0 #9c5000;
 $textGradient: linear-gradient(to top, #e66200, #fc9447, #e66200), linear-gradient(to bottom, #000000, #000000);

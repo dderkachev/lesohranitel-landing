@@ -2,45 +2,99 @@ extends common/layout
 
 block content
   main.main
+    section.section.section--slider
+      h3 Как это выглядит
+      div.slider-views
+        div.slider-views__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-views__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-views__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-views__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-views__slide
+          img(src="../img/view1.png" alt="")
+    section.section.section--slider
+      h3 Обнаруживаем лесные,  степные, техногенные дымы
+      div.slider-observer
+        div.slider-observer__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-observer__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-observer__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-observer__slide
+          img(src="../img/view1.png" alt="")
+        div.slider-observer__slide
+          img(src="../img/view1.png" alt="")
     section.section
       h2 Почему нас выбирают?
       div.items
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item1.png" alt="")
           p Надёжность, точность, скорость обнаружений и оповещений за счёт запатентованных технологий и алгоритмов
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item2.png" alt="")
           p Комплексность – 17 подсистем: вся информация, инструменты и отчёты в едином интерфейсе с едиными данными
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item3.png" alt="")
           p Все виды мониторинга – наземный, авиационный, космический
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item4.png" alt="")
           p Все способы обнаружения – от обращений граждан до автоматической аналитики 
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item5.png" alt="")
           p Отсутствие ограничений на количество пользователей и камер, работающих одновременно
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item6.png" alt="")
           p Прозрачная интеграция с другими системами, в том числе, 112 и «Безопасный город»
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item7.png" alt="")
           p Работа с любыми устройствами (смартфоны, планшеты, компьютеры…) и любыми операционными системами
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item8.png" alt="")
           p Отсутствие необходимости установки программного обеспечения на устройства пользователей
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item9.png" alt="")
           p Полный отказ от импортного программного обеспечения – оптимизирована работа с российскими операционными системами
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item10.png" alt="")
           p Возможность работы в полностью закрытом контуре на оборудовании Заказчика 
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item11.png" alt="")
           p Собственная система автоматизированного проектирования и выбора оптимального расположения точек мониторинга
         div.items__item
-          img(src="../images/item1.png")
+          img(src="../img/item12.png" alt="")
           p Мобильные приложения для авиационного, наземного патрулирования и управления БПЛА
-        div.items__item
-          img(src="../images/item1.png")
+        div.items__item.items__item--align
+          img(src="../img/item13.png" alt="")
           p Наличие контрольно-отчётных функций о работе самой системы и её пользователей
+        div.items__item.items__item--large
+          img(src="../img/item14.png" alt="")
+          p Ответственность за систему в целом на одном квалифицированном исполнителе с государственными лицензиями и проверенной репутацией своими специалистами и техникой обеспечиваем весь цикл работ: проектирование, поставка, монтаж, строительство, обучение и поддержка пользователей, модернизация.
+          a(href="#") Подробнее
+    section.section
+      h2 Почему видеомониторинг?
+      h3 По сравнению с космическим или авиапатрулированием видеомониторинг в несколько раз более:
+      div.video
+        div.video__item.video__item--default
+          img.video__item-img(src="../img/video1.png" alt="")
+          p.video__item-header Оперативный
+          p камера делает оборот 360 градусов примерно каждые 10-12 минут, в то время как авиапатруль – не более 4 раз в сутки, космический и того реже
+        div.video__item
+          img.video__item-img.video__item-img--mt(src="../img/video2.png" alt="")
+          p.video__item-header Независимый от человеческого фактора
+          p определение дыма автоматизировано, диспетчер задействован только в процессе подтверждения и классификации
+        div.video__item.video__item--default
+          img.video__item-img(src="../img/video3.png" alt="")
+          p.video__item-header Дешёвый
+          p достаточно сравнить бюджеты с авиапатрулированием, и плюс уменьшение ущерба из-за раннего обнаружения
+        div.video__item.video__item--large
+          img.video__item-img.video__item-img--mt(src="../img/video4.png" alt="")
+          p.video__item-header Независимое от погодных условий, времени суток и беспрецедентно надежные
+          p камеры AXIS работают от -50 до +50 при любой погоде. За 9 лет работы Лесохранителя - более 900 точек мониторинга - оборудование показало себя как очень надёжное
+        div.video__item.video__item--default.video__item--large
+          img.video__item-img.video__item-img--mt(src="../img/video5.png" alt="")
+          p.video__item-header Безопасный
+          p Лесохранитель определяет координаты дыма с погрешностью до 100 метров и моментально оповещает всех, кого требуется, без опасности для человека. С помощью приложения для БПЛА можно определить площадь пожара, длину кромки и т.д., не подвергая опасности специалистов – не нужно идти-ехать-лететь к пожару
