@@ -2,6 +2,82 @@ extends common/layout
 
 block content
   main.main
+    section.section.section--tabs
+      div.tab-panel
+        ul.tab-panel-wrapper
+          li.active <span>01.</span> Автоматизированный видеомониторинг пожаров он-лайн с точным определением координат и моментальным оповещением
+          li <span>02.</span> Автоматизированный мониторинг и управление силами и средствами с маршрутизацией, выдачей и контролем заданий в режиме он-лайн
+          li <span>03.</span> Медиаархив видеоданных и зафиксированных событий
+          li <span>04.</span> Географическая информационная система
+          li <span>05.</span> Отображение и учёт событий всех видов мониторинга
+          li <span>06.</span> Подсистема приема и регистрации обращений граждан
+          li <span>07.</span> Система автоматизированного оповещения
+          li <span>08.</span> Интеграция с БГ и 112
+          li <span>09.</span> Подсистема коммуникаций (чат, голосовые звонки, видео звонки, видеоконференции, обмен файлами)
+          li <span>10.</span> Подсистема интеграции комплексов дистанционного обнаружения, в том числе на базе беспилотных летательных аппаратов (БПЛА)
+      div.tab-content
+        div.tab-content__item.active
+          h2 Комплексная платформа
+          h3 Каждая точка мониторинга
+          div.item-row
+            div.item-row__block.item-row__block--fn.item-row__block--img-sm
+              img(src="../img/row-img5.png" alt="")
+              p Радиус <span>до <span>35</span>км</span>
+            div.item-row__block.item-row__block--fn.item-row__block--pt.item-row__block--corner
+              img(src="../img/row-img6.png" alt="")
+              p Площадь <span>до <span>200</span>тыс.га</span>
+            div.item-row__block.item-row__block--fn.item-row__block--pt
+              img(src="../img/row-img7.png" alt="")
+              p Обзор <span><span>360 ̊̊ </span> <span>10</span>мин</span>
+          div.item-row.item-row--fw
+            div.item-column
+              div.item-row__block.item-row__block--fn.item-row__block--img
+                img(src="../img/row-img8.png" alt="")
+                p Погрешность координат дыма <span>не более <span>150</span>м</span>
+              p.item-row__text.item-row__text--hw Автоматическое обнаружение <span>пожара на ранней стадии</span> в дневное и ночное время
+              p.item-row__text.item-row__text--hw.item-row__text--def Все методы оповещения операторов и пользователей системы: <span>световой и звуковой сигнал, смс, электронная почта, мессенджеры</span>
+            div.item-column
+              p.item-row__text.item-row__text--hw Минимальные временные <span>затраты оператора за счёт</span> групповой обработки «дым-точек»
+              p.item-row__text.item-row__text--hw.item-row__text--def <span>Система реагирует</span> на белый, и на чёрный дым <span>на лесные, степные,техногенные пожары</span>
+              p.item-row__text.item-row__text--hw <span>Рекомендуемое</span> количество специалистов  – 1 диспетчер на <span>каждые</span> 30 камер 
+              p.item-row__text.item-row__text--hw.item-row__text--def Время хранения архива записей неограниченно <span>(зависит от ёмкости жестких дисков)</span>  
+        div.tab-content__item
+          h2 Комплексная платформа
+          div.item-row.item-row--pr
+            p.item-row__text.item-row__text--hw Работаем с разными датчиками ГЛОНАСС
+            p.item-row__text.item-row__text--hw Выдача и контроль заданий он-лайн
+            p.item-row__text.item-row__text--fw Полная визуализация, детализация, управление и отчётность по маршрутам:
+          div.item-row
+            div.item-row__block.item-row__block--pt
+              img(src="../img/row-img1.png" alt="")
+              p Автомобилей <span>спец.техники</span> (с учётом пробок)
+            div.item-row__block.item-row__block--pt.item-row__block--img
+              img(src="../img/row-img2.png" alt="")
+              p Беспилотных <span>летательных</span> аппаратов
+            div.item-row__block.item-row__block--bg
+              img(src="../img/row-img3.png" alt="")
+              p Больше <span>Авиапатрулей</span>
+            div.item-row__block.item-row__block--bg
+              img(src="../img/row-img4.png" alt="")
+              p И ещё <span>Сотрудников</span>
+          div.item-row.item-row--border 
+            p.item-row__text Например, в Московской области к Лесохранителю подключены более 900 автотранспортных средств, 30 беспилотных летательных аппаратов, и 30 сотрудников с мобильными приложениями (в плане 2020 года – более 1000).
+        div.tab-content__item
+          p Содержимое 3 блока
+        div.tab-content__item
+          p Содержимое 4 блока
+        div.tab-content__item
+          p Содержимое 5 блока
+        div.tab-content__item
+          p Содержимое 6 блока
+        div.tab-content__item
+          p Содержимое 7 блока
+        div.tab-content__item
+          p Содержимое 8 блока
+        div.tab-content__item
+          p Содержимое 9 блока
+        div.tab-content__item
+          p Содержимое 10 блока
     section.section.section--slider
       h3 Как это выглядит
       div.slider-views
@@ -16,7 +92,7 @@ block content
         div.slider-views__slide
           img(src="../img/view1.png" alt="")
     section.section.section--slider
-      h3 Обнаруживаем лесные,  степные, техногенные дымы
+      h3 Обнаруживаем лесные, степные, техногенные дымы
       div.slider-observer
         div.slider-observer__slide
           img(src="../img/view1.png" alt="")
