@@ -36,11 +36,69 @@
 
     &--slider {
         padding: 0 35px;
+        &-bg {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                background: url('../img/slider-bg.png') left center no-repeat;
+                background-size: 100%;
+                width: $wrapperSize;
+                height: 900px;
+                top: -145px;
+                left: -80px;
+                right: -80px;
+                z-index: -1;
+            }
+        }
     }
 
     &--tabs {
+        position: relative;
         display: flex;
         margin-top: 0;
+        &::after {
+            position: absolute;
+            content: '';
+            left: -80px;
+            top: 0;
+            width: 851px;
+            height: 900px;
+            background: url('../img/map.png') no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &--items {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            left: -80px;
+            right: -80px;
+            top: -40px;
+            width: $wrapperSize;
+            height: 1500px;
+            background: url('../img/item-bg.png') no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+    }
+
+    &--video {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            left: -80px;
+            top: 0;
+            width: 851px;
+            height: 900px;
+            background: url('../img/map.png') no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
     }
 
     @include slider();
@@ -70,6 +128,9 @@
             line-height: 1.56;                
             text-align: center;
             color: #212121;
+        }
+        a {
+            @include btn--link();
         }
     }
     &__item--large {
@@ -132,6 +193,7 @@
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 20px 50px 0 rgba(0, 0, 0, 0.2);
+    padding-right: 15px;
     &::after {
         position: absolute;
         content: '';
@@ -193,7 +255,7 @@
         right: 55px;
         width: 134px;
         height: 146px;
-        background: url('../../img/logo-lg.png') center no-repeat;
+        background: url('../img/logo-lg.png') center no-repeat;
         background-size: contain;
     }
 
@@ -236,7 +298,7 @@
                 .item-row__block--img {
                     width: 320px;
                     padding-top: 70px;
-                    background: url('../../img/row1-item4.png') bottom left no-repeat;
+                    background: url('../img/row1-item4.png') bottom left no-repeat;
                     background-size: 100%;
 
                     img {
@@ -319,7 +381,7 @@
             &__block--pt {
                 width: 320px;
                 padding-top: 103px;        
-                background: url('../../img/bg-image-pt.png') left bottom no-repeat;
+                background: url('../img/bg-image-pt.png') left bottom no-repeat;
                 background-size: 100%;
 
                 img {
@@ -337,8 +399,8 @@
 
             &__block--bg {
                 width: 320px;
-                padding-top: 70px;
-                background: url('../../img/row2-item3.png') left bottom no-repeat;
+                padding-top: 74px;
+                background: url('../img/row2-item3.png') left bottom no-repeat;
                 background-size: 100%;
 
                 img {
@@ -348,7 +410,7 @@
                 }
 
                 &:last-child {   
-                    background: url('../../img/row2-item4.png') left bottom no-repeat;
+                    background: url('../img/row2-item4.png') left bottom no-repeat;
                     background-size: 100%;
 
                     img {
@@ -358,7 +420,7 @@
             }
 
             &__block--img {
-                background: url('../../img/row2-item2.png') left bottom no-repeat;
+                background: url('../img/row2-item2.png') left bottom no-repeat;
                 background-size: 100%;
 
                 img {
@@ -372,7 +434,7 @@
                 width: 185px;
                 margin-right: 20px;
                 padding-top: 80px;
-                background: url('../../img/row1-item1.png') bottom left no-repeat;
+                background: url('../img/row1-item1.png') bottom left no-repeat;
                 background-size: 100%;
                 margin-bottom: 15px;
 
@@ -396,7 +458,7 @@
                     width: 281px;
                     padding-top: 82px;
                     margin-right: 20px;
-                    background: url('../../img/row1-item2.png') bottom left no-repeat;
+                    background: url('../img/row1-item2.png') bottom left no-repeat;
                     background-size: 100%;
                     margin-bottom: 15px;
 
@@ -436,6 +498,22 @@
                 margin: auto;
                 margin-bottom: 15px;
             }
+        }
+    }
+
+    &__item--second {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            left: -35px;
+            right: -80px;
+            bottom: -170px;
+            width: auto;
+            height: 936px;
+            background: url('../img/row2-bg.png') left bottom no-repeat;
+            background-size: contain;
+            z-index: -1;
         }
     }
 }

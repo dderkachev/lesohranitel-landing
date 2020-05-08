@@ -8,25 +8,37 @@
 
 header {
   @include wrapper();
+  position: relative;
   width: 100%;
   flex: 0 0 auto;
   &::after {
     position: absolute;
     content: '';
-    background: url('../img/background-top.png') top center no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 1660px;
+    background: url('../img/header-bg.png') top center no-repeat;
+    background-size: 100%;
+    width: $wrapperSize;
+    height: 1527px;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -80px;
+    right: -80px;
     z-index: -1;
   }
 }
 
 .header-top {
-  //padding-left: 310px;
-  margin-bottom: 55px;
+  position: relative;
+  margin-bottom: 40px;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 15px;
+    left: -80px;
+    width: 270px;
+    height: 200px;
+    background: url('../img/camera-lg.png') center no-repeat;
+    background-size: contain;
+  }
+
   h1 {
     margin-left: 230px;
     max-width: 600px;
@@ -70,9 +82,20 @@ header {
 }
 
 .header-bottom__info {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 45px;
+  &::after {
+    position: absolute;
+    content: '';
+    right: -80px;
+    bottom: 20px;
+    width: 250px;
+    height: 100px;
+    background: url('../img/quadcopter.png') center no-repeat;
+    background-size: contain;
+  }
 
   .info-block {
     position: relative;
@@ -112,7 +135,7 @@ header {
 
   .info-block--bg {
     width: 145px;
-    background: url('../../img/info-background.png') left bottom no-repeat;
+    background: url('../img/info-background.png') left bottom no-repeat;
     background-size: 100%;
 
     img {
@@ -156,7 +179,7 @@ header {
         left: -17px;
         width: 16px;
         height: 21px;
-        background: url('../../img/paper.png') center no-repeat;
+        background: url('../img/paper.png') center no-repeat;
         background-size: contain;
       }
     }
@@ -191,7 +214,7 @@ header {
       right: 15px;
       width: 12px;
       height: 12px;
-      background: url("../../img/down-arrow.png") center no-repeat;
+      background: url("../img/down-arrow.png") center no-repeat;
       background-size: contain;
     }
   }
@@ -240,6 +263,12 @@ header {
       }
     }
   }
+}
+
+.header-logo {
+  position: absolute;
+  right: -80px;
+  top: calc(50% - 355px);
 }
 
 nav {
@@ -292,7 +321,7 @@ nav {
 
       &:first-child {
         &::after {
-          background: url("../../img/phone.png") center no-repeat;
+          background: url("../img/phone.png") center no-repeat;
           background-size: contain;
         }
       }
@@ -300,7 +329,7 @@ nav {
       &:last-child {
         margin-right: 0;
         &::after {
-          background: url("../../img/logout.png") center no-repeat;
+          background: url("../img/logout.png") center no-repeat;
           background-size: contain;
         }
       }

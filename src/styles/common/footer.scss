@@ -1,11 +1,26 @@
+@import "../utils/variables";
 @import "../mixins/wrapper";
 
 footer {
+    position: relative;
     @include wrapper();
     display: flex;
     align-items: center;
     flex: 0 0 auto;
     padding: 20px 0;
+    &::after {
+        position: absolute;
+        content: '';
+        background: url('../img/footer-bg.png') left bottom no-repeat;
+        background-size: 100%;
+        width: $wrapperSize;
+        height: 239px;
+        bottom: 0;
+        left: -80px;
+        right: -80px;
+        z-index: -1;
+    }
+
     .logo {
         width: 101px;
         height: 110px;

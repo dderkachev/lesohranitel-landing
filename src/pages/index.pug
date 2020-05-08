@@ -3,7 +3,7 @@ extends common/layout
 block content
   main.main
     section.section.section--tabs
-      div.tab-panel
+      div.tab-panel#tab-panel
         ul.tab-panel-wrapper
           li.active <span>01.</span> Автоматизированный видеомониторинг пожаров он-лайн с точным определением координат и моментальным оповещением
           li <span>02.</span> Автоматизированный мониторинг и управление силами и средствами с маршрутизацией, выдачей и контролем заданий в режиме он-лайн
@@ -21,18 +21,18 @@ block content
           h3 Каждая точка мониторинга
           div.item-row
             div.item-row__block.item-row__block--fn.item-row__block--img-sm
-              img(src="../img/row-img5.png" alt="")
+              img(src="img/row-img5.png" alt="")
               p Радиус <span>до <span>35</span>км</span>
             div.item-row__block.item-row__block--fn.item-row__block--pt.item-row__block--corner
-              img(src="../img/row-img6.png" alt="")
+              img(src="img/row-img6.png" alt="")
               p Площадь <span>до <span>200</span>тыс.га</span>
             div.item-row__block.item-row__block--fn.item-row__block--pt
-              img(src="../img/row-img7.png" alt="")
+              img(src="img/row-img7.png" alt="")
               p Обзор <span><span>360 ̊̊ </span> <span>10</span>мин</span>
           div.item-row.item-row--fw
             div.item-column
               div.item-row__block.item-row__block--fn.item-row__block--img
-                img(src="../img/row-img8.png" alt="")
+                img(src="img/row-img8.png" alt="")
                 p Погрешность координат дыма <span>не более <span>150</span>м</span>
               p.item-row__text.item-row__text--hw Автоматическое обнаружение <span>пожара на ранней стадии</span> в дневное и ночное время
               p.item-row__text.item-row__text--hw.item-row__text--def Все методы оповещения операторов и пользователей системы: <span>световой и звуковой сигнал, смс, электронная почта, мессенджеры</span>
@@ -41,7 +41,7 @@ block content
               p.item-row__text.item-row__text--hw.item-row__text--def <span>Система реагирует</span> на белый, и на чёрный дым <span>на лесные, степные,техногенные пожары</span>
               p.item-row__text.item-row__text--hw <span>Рекомендуемое</span> количество специалистов  – 1 диспетчер на <span>каждые</span> 30 камер 
               p.item-row__text.item-row__text--hw.item-row__text--def Время хранения архива записей неограниченно <span>(зависит от ёмкости жестких дисков)</span>  
-        div.tab-content__item
+        div.tab-content__item.tab-content__item--second
           h2 Комплексная платформа
           div.item-row.item-row--pr
             p.item-row__text.item-row__text--hw Работаем с разными датчиками ГЛОНАСС
@@ -49,16 +49,16 @@ block content
             p.item-row__text.item-row__text--fw Полная визуализация, детализация, управление и отчётность по маршрутам:
           div.item-row
             div.item-row__block.item-row__block--pt
-              img(src="../img/row-img1.png" alt="")
+              img(src="img/row-img1.png" alt="")
               p Автомобилей <span>спец.техники</span> (с учётом пробок)
             div.item-row__block.item-row__block--pt.item-row__block--img
-              img(src="../img/row-img2.png" alt="")
+              img(src="img/row-img2.png" alt="")
               p Беспилотных <span>летательных</span> аппаратов
             div.item-row__block.item-row__block--bg
-              img(src="../img/row-img3.png" alt="")
-              p Больше <span>Авиапатрулей</span>
+              img(src="img/row-img3.png" alt="")
+              p А также <span>Авиапатрулей</span>
             div.item-row__block.item-row__block--bg
-              img(src="../img/row-img4.png" alt="")
+              img(src="img/row-img4.png" alt="")
               p И ещё <span>Сотрудников</span>
           div.item-row.item-row--border 
             p.item-row__text Например, в Московской области к Лесохранителю подключены более 900 автотранспортных средств, 30 беспилотных летательных аппаратов, и 30 сотрудников с мобильными приложениями (в плане 2020 года – более 1000).
@@ -78,99 +78,100 @@ block content
           p Содержимое 9 блока
         div.tab-content__item
           p Содержимое 10 блока
-    section.section.section--slider
+    section.section.section--slider.section--slider-bg
       h3 Как это выглядит
       div.slider-views
         div.slider-views__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/view1.png" alt="")
         div.slider-views__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/view2.png" alt="")
         div.slider-views__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/view3.png" alt="")
         div.slider-views__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/view4.png" alt="")
         div.slider-views__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/view1.png" alt="")
     section.section.section--slider
       h3 Обнаруживаем лесные, степные, техногенные дымы
       div.slider-observer
         div.slider-observer__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/observer1.png" alt="")
         div.slider-observer__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/observer2.png" alt="")
         div.slider-observer__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/observer3.png" alt="")
         div.slider-observer__slide
-          img(src="../img/view1.png" alt="")
+          img(src="img/observer4.png" alt="")
         div.slider-observer__slide
-          img(src="../img/view1.png" alt="")
-    section.section
+          img(src="img/observer1.png" alt="")
+    section.section.section--items
       h2 Почему нас выбирают?
       div.items
         div.items__item
-          img(src="../img/item1.png" alt="")
+          img(src="img/item1.png" alt="")
           p Надёжность, точность, скорость обнаружений и оповещений за счёт запатентованных технологий и алгоритмов
         div.items__item
-          img(src="../img/item2.png" alt="")
+          img(src="img/item2.png" alt="")
           p Комплексность – 17 подсистем: вся информация, инструменты и отчёты в едином интерфейсе с едиными данными
+          a(href="#") Подробнее
         div.items__item
-          img(src="../img/item3.png" alt="")
+          img(src="img/item3.png" alt="")
           p Все виды мониторинга – наземный, авиационный, космический
         div.items__item
-          img(src="../img/item4.png" alt="")
+          img(src="img/item4.png" alt="")
           p Все способы обнаружения – от обращений граждан до автоматической аналитики 
         div.items__item
-          img(src="../img/item5.png" alt="")
+          img(src="img/item5.png" alt="")
           p Отсутствие ограничений на количество пользователей и камер, работающих одновременно
         div.items__item
-          img(src="../img/item6.png" alt="")
+          img(src="img/item6.png" alt="")
           p Прозрачная интеграция с другими системами, в том числе, 112 и «Безопасный город»
         div.items__item
-          img(src="../img/item7.png" alt="")
+          img(src="img/item7.png" alt="")
           p Работа с любыми устройствами (смартфоны, планшеты, компьютеры…) и любыми операционными системами
         div.items__item
-          img(src="../img/item8.png" alt="")
+          img(src="img/item8.png" alt="")
           p Отсутствие необходимости установки программного обеспечения на устройства пользователей
         div.items__item
-          img(src="../img/item9.png" alt="")
+          img(src="img/item9.png" alt="")
           p Полный отказ от импортного программного обеспечения – оптимизирована работа с российскими операционными системами
         div.items__item
-          img(src="../img/item10.png" alt="")
+          img(src="img/item10.png" alt="")
           p Возможность работы в полностью закрытом контуре на оборудовании Заказчика 
         div.items__item
-          img(src="../img/item11.png" alt="")
+          img(src="img/item11.png" alt="")
           p Собственная система автоматизированного проектирования и выбора оптимального расположения точек мониторинга
         div.items__item
-          img(src="../img/item12.png" alt="")
+          img(src="img/item12.png" alt="")
           p Мобильные приложения для авиационного, наземного патрулирования и управления БПЛА
         div.items__item.items__item--align
-          img(src="../img/item13.png" alt="")
+          img(src="img/item13.png" alt="")
           p Наличие контрольно-отчётных функций о работе самой системы и её пользователей
         div.items__item.items__item--large
-          img(src="../img/item14.png" alt="")
+          img(src="img/item14.png" alt="")
           p Ответственность за систему в целом на одном квалифицированном исполнителе с государственными лицензиями и проверенной репутацией своими специалистами и техникой обеспечиваем весь цикл работ: проектирование, поставка, монтаж, строительство, обучение и поддержка пользователей, модернизация.
           a(href="#") Подробнее
-    section.section
+    section.section.section--video
       h2 Почему видеомониторинг?
       h3 По сравнению с космическим или авиапатрулированием видеомониторинг в несколько раз более:
       div.video
         div.video__item.video__item--default
-          img.video__item-img(src="../img/video1.png" alt="")
+          img.video__item-img(src="img/video1.png" alt="")
           p.video__item-header Оперативный
           p камера делает оборот 360 градусов примерно каждые 10-12 минут, в то время как авиапатруль – не более 4 раз в сутки, космический и того реже
         div.video__item
-          img.video__item-img.video__item-img--mt(src="../img/video2.png" alt="")
+          img.video__item-img.video__item-img--mt(src="img/video2.png" alt="")
           p.video__item-header Независимый от человеческого фактора
           p определение дыма автоматизировано, диспетчер задействован только в процессе подтверждения и классификации
         div.video__item.video__item--default
-          img.video__item-img(src="../img/video3.png" alt="")
+          img.video__item-img(src="img/video3.png" alt="")
           p.video__item-header Дешёвый
           p достаточно сравнить бюджеты с авиапатрулированием, и плюс уменьшение ущерба из-за раннего обнаружения
         div.video__item.video__item--large
-          img.video__item-img.video__item-img--mt(src="../img/video4.png" alt="")
+          img.video__item-img.video__item-img--mt(src="img/video4.png" alt="")
           p.video__item-header Независимое от погодных условий, времени суток и беспрецедентно надежные
           p камеры AXIS работают от -50 до +50 при любой погоде. За 9 лет работы Лесохранителя - более 900 точек мониторинга - оборудование показало себя как очень надёжное
         div.video__item.video__item--default.video__item--large
-          img.video__item-img.video__item-img--mt(src="../img/video5.png" alt="")
+          img.video__item-img.video__item-img--mt(src="img/video5.png" alt="")
           p.video__item-header Безопасный
           p Лесохранитель определяет координаты дыма с погрешностью до 100 метров и моментально оповещает всех, кого требуется, без опасности для человека. С помощью приложения для БПЛА можно определить площадь пожара, длину кромки и т.д., не подвергая опасности специалистов – не нужно идти-ехать-лететь к пожару

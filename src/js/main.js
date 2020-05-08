@@ -77,4 +77,8 @@ $(document).ready(function(){
       $('.tab-content').find('.tab-content__item:eq(' + index + ')').addClass('active');
     }
   });
+
+  new SimpleBar(document.getElementById('tab-panel'));
+
 });
+

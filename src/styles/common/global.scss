@@ -1,11 +1,16 @@
 @import "../../local_modules/normalize.css/normalize";
 @import "../../local_modules/tiny-slider/dist/tiny-slider";
+@import "../../local_modules/simplebar/dist/simplebar.min";
 @import "../utils/fonts";
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 html {
@@ -39,4 +44,18 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 6px;
+  top: 20px;
+  bottom: 20px;
+  right: 4px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #00a100;
+  opacity: 1 !important;
 }

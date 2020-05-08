@@ -48,7 +48,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local('GILROY-BOLD'), url('../../fonts/GILROY-BOLD.woff') format('woff');
+    src: local('GILROY-BOLD'), url('../fonts/GILROY-BOLD.woff') format('woff');
 }
 
 @font-face {
@@ -56,7 +56,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: local('GILROY-SEMIBOLD'), url('../../fonts/GILROY-SEMIBOLD.woff') format('woff');
+    src: local('GILROY-SEMIBOLD'), url('../fonts/GILROY-SEMIBOLD.woff') format('woff');
 }
 
 @font-face {
@@ -64,5 +64,5 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('GILROY-REGULAR'), url('../../fonts/GILROY-REGULAR.woff') format('woff');
+    src: local('GILROY-REGULAR'), url('../fonts/GILROY-REGULAR.woff') format('woff');
 }
