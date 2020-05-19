@@ -1,0 +1,18 @@
+#maps {
+    position: absolute;
+    right: -153px;
+    transform: scale(0.74);
+    top: 41px;
+    z-index: 1;
+    .region {
+        stroke: rgb(10, 255, 0);
+        fill: transparent;
+        &.include {
+            fill: rgba(10, 255, 0, 0.6);
+            &.active {
+                fill: rgba(230, 98, 0, 1);
+                stroke: rgb(255, 148, 59);
+            }
+        }
+    }
+}

@@ -11,11 +11,13 @@
         left: -35px;
         display: flex;
         justify-content: space-between;
+        outline: none;
         button {
             width: 30px;
             height: 30px;
             border: 0;
             border-radius: 50%;
+            outline: none;
             &:first-child {
                 background: url('../img/slider-prev.png') center no-repeat #e66200;
                 background-size: 25%;
@@ -45,11 +47,13 @@
         left: -15px;
         display: flex;
         justify-content: space-between;
+        outline: none;
         button {
             width: 30px;
             height: 30px;
             border: 0;
             border-radius: 50%;
+            outline: none;
             &:first-child {
                 background: url('../img/slider-prev.png') center no-repeat #e66200;
                 background-size: 25%;
