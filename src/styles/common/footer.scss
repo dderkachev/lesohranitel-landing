@@ -32,6 +32,9 @@ footer {
     nav {
         flex-grow: 1;
         padding-right: 0;
+        .logo {
+            display: none;
+        }
         ul {
             li {
                 a {

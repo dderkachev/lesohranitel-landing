@@ -517,3 +517,95 @@
         }
     }
 }
+
+.main--partner {
+    position: relative;
+    padding-top: 30px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: $wrapperSize;
+        height: 1256px;
+        top: -120px;
+        left: -80px;
+        right: -80px;
+        background: url('../img/partner-bg-top.png') left bottom no-repeat;
+        background-size: 100%;
+        z-index: -1;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: $wrapperSize;
+        height: 922px;
+        left: -80px;
+        right: -80px;
+        bottom: -20px;
+        background: url('../img/partner-bg-bottom.png') left bottom no-repeat;
+        background-size: 100%;
+        z-index: -1;
+    }
+    h1 {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    h2 {
+        font-size: 35px;
+        font-family: $fontFamilySub;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+            @include substrate();
+            padding: 5px 15px;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: $fontFamilyDefault;
+    &-item {
+        @include substrate-block();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 390px;
+        padding: 10px 5px;
+        margin-left: auto;
+        margin-right: auto;
+        h3 {
+            margin: 10px 0;
+            margin-bottom: 5px;
+            span {
+                display: block;
+                font-size: 21px;
+                font-weight: 600;
+                &:first-child {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        a {
+            @include btn--contact();
+            margin-bottom: 10px;
+            color: #000000;
+        }
+    }
+}

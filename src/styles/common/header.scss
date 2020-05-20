@@ -11,6 +11,12 @@ header {
   position: relative;
   width: 100%;
   flex: 0 0 auto;
+}
+
+.header {
+  .logo {
+    display: none;
+  }
   &::after {
     position: absolute;
     content: '';
@@ -22,6 +28,17 @@ header {
     left: -80px;
     right: -80px;
     z-index: -1;
+  }
+}
+
+.header--logo {
+  &::after {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+    margin-right: auto;
   }
 }
 
