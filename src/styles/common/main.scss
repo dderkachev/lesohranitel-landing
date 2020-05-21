@@ -615,6 +615,7 @@
     position: relative;
     padding-top: 30px;
     text-align: center;
+    z-index: auto;
     &::after {
         position: absolute;
         content: '';
