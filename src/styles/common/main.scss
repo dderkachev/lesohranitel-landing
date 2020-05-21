@@ -57,6 +57,7 @@
         position: relative;
         display: flex;
         margin-top: 0;
+        text-align: unset;
         &::after {
             position: absolute;
             content: '';
@@ -248,20 +249,8 @@
     margin-left: 35px;
     color: #ffffff;
 
-    &::after {
-        position: absolute;
-        content: '';
-        top: -10px;
-        right: 55px;
-        width: 134px;
-        height: 146px;
-        background: url('../img/logo-lg.png') center no-repeat;
-        background-size: contain;
-    }
-
     &__item {
         display: none;
-        text-align: left;
 
         h2 {
             margin-bottom: 15px;
@@ -273,6 +262,16 @@
 
         &.active {
             display: block;
+        }
+
+        .item-header {
+            &--tl {
+                margin-right: auto;
+            }
+            &--tc {
+                margin: auto;
+                margin-bottom: 20px;
+            }
         }
 
         .item-row {
@@ -329,6 +328,7 @@
             }
 
             &__text {
+                position: relative;
                 margin-bottom: 20px;
                 padding: 5px 15px;
                 border-radius: 10px;
@@ -355,6 +355,30 @@
                 background: $defaultColor;
             }
 
+            &__text--tc {
+                text-align: center;
+            }
+
+            &__text--pl {
+                padding-left: 60px;
+            }
+
+            &__text--pr {
+                padding-right: 40px;
+            }
+
+            &__text-bage {
+                position: absolute;
+                left: 0;
+                top: -10px;
+                padding: 5px 10px;
+                background-color: $defaultColor;
+                font-family: $fontFamilyDefault;
+                font-size: 25px;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+
             &__block {
                 position: relative;
                 display: flex;
@@ -374,6 +398,47 @@
                         font-size: 37px;
                         font-weight: 800;
                         line-height: normal;
+                    }
+                }
+
+                .info-block {
+                    position: relative;
+                    max-width: 520px;
+                    margin-top: 15px;
+                    padding: 15px 30px;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+                    span {
+                        font-family: $fontFamilySub;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: #000000;
+                    }
+                    p {
+                        padding: 0;
+                        font-size: 17px;
+                        text-transform: none;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: -12px;
+                        right: unset;
+                        bottom: unset;
+                        left: 15px;
+                        border-radius: 0;
+                        border-bottom: 12px solid #fff;
+                        border-left: 10px solid transparent;
+                        background: 0 0;
+                    }
+                }
+
+                .image-block {
+                    border-radius: 10px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px;
                     }
                 }
             }
@@ -481,6 +546,13 @@
                     left: -10px;
                 }
             }
+
+            &__block--column {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-right: 0;
+            }
         }
 
         .item-column {
@@ -498,6 +570,23 @@
                 margin: auto;
                 margin-bottom: 15px;
             }
+
+            &--fw {
+                width: 100%;
+            }
+        }
+    }
+
+    &__item--first {
+        &::after {
+            position: absolute;
+            content: '';
+            top: -10px;
+            right: 55px;
+            width: 134px;
+            height: 146px;
+            background: url('../img/logo-lg.png') center no-repeat;
+            background-size: contain;
         }
     }
 
@@ -514,6 +603,24 @@
             background: url('../img/row2-bg.png') left bottom no-repeat;
             background-size: contain;
             z-index: -1;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -10px;
+            right: 55px;
+            width: 134px;
+            height: 146px;
+            background: url('../img/logo-lg.png') center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__item--third {
+        text-align: center;
+        .info-block {
+            text-align: left;
         }
     }
 }

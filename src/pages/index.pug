@@ -16,9 +16,9 @@ block content
           li <span>09.</span> Подсистема коммуникаций (чат, голосовые звонки, видео звонки, видеоконференции, обмен файлами)
           li <span>10.</span> Подсистема интеграции комплексов дистанционного обнаружения, в том числе на базе беспилотных летательных аппаратов (БПЛА)
       div.tab-content
-        div.tab-content__item.active
-          h2 Комплексная платформа
-          h3 Каждая точка мониторинга
+        div.tab-content__item.tab-content__item--first.active
+          h2.item-header.item-header--tl Комплексная платформа
+          h3.item-header.item-header--tl Каждая точка мониторинга
           div.item-row
             div.item-row__block.item-row__block--fn.item-row__block--img-sm
               img(src="img/row-img5.png" alt="")
@@ -42,7 +42,7 @@ block content
               p.item-row__text.item-row__text--hw <span>Рекомендуемое</span> количество специалистов  – 1 диспетчер на <span>каждые</span> 30 камер 
               p.item-row__text.item-row__text--hw.item-row__text--def Время хранения архива записей неограниченно <span>(зависит от ёмкости жестких дисков)</span>  
         div.tab-content__item.tab-content__item--second
-          h2 Комплексная платформа
+          h2.item-header.item-header--tl Комплексная платформа
           div.item-row.item-row--pr
             p.item-row__text.item-row__text--hw Работаем с разными датчиками ГЛОНАСС
             p.item-row__text.item-row__text--hw Выдача и контроль заданий он-лайн
@@ -62,8 +62,24 @@ block content
               p И ещё <span>Сотрудников</span>
           div.item-row.item-row--border 
             p.item-row__text Например, в Московской области к Лесохранителю подключены более 900 автотранспортных средств, 30 беспилотных летательных аппаратов, и 30 сотрудников с мобильными приложениями (в плане 2020 года – более 1000).
-        div.tab-content__item
-          p Содержимое 3 блока
+        div.tab-content__item.tab-content__item--third
+          h2.item-header.item-header--tc Комплексная платформа
+          div.item-row
+            p.item-row__text.item-row__text--tc.item-row__text--pl.item-row__text--pr Медиа Архив видеоданных и зафиксированных событий #[span.item-row__text-bage 03.]
+            p.item-row__text.item-row__text--fw.item-row__text--tc  Медиа Архив работает со всеми типами данных и с картографической привязкой упорядоченно хранит всю информацию системы: маршруты патрулей, события, реакцию пользователей, видео, фото, и т.д.
+          div.item-row
+            div.item-row__block.item-row__block--column
+              div.image-block
+                img(src="img/row3-img1.png", alt="")
+              div.info-block
+                span Пример данных их архива:   
+                p Доступ к записям потенциально опасных объектов, найденных автоматической системой - оповещение в почте и записи в системе
+            div.item-row__block.item-row__block--column
+              div.image-block
+                img(src="img/row3-img2.png", alt="")
+              div.info-block
+                span Пример данных их архива:   
+                p Отчёт о выполненной миссии беспилотника: фотографии, маршрут, точки съемки, полигон интереса, правило склейки
         div.tab-content__item
           p Содержимое 4 блока
         div.tab-content__item
