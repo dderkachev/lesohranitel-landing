@@ -1,0 +1,40 @@
+extends common/layoutSub
+
+block content
+    main.main.main--contact
+        h1 Наши контакты
+        h2 Как с нами связаться?
+        section.section.section--contact
+            div.contacts
+                div.contacts-item
+                    div.contacts-item__image
+                        img(src="img/contact1.png", alt="")
+                    h3 Почтовый адрес:
+                    p #[img(src="img/position.svg" alt="")] 180017, Псков, Советская, 73
+                    p ООО "Формоза-Сервис" 
+                div.contacts-item
+                    div.contacts-item__image
+                        img(src="img/contact2.png", alt="")
+                    h3 Информация и продажи:
+                    a(href="mailto:info@lesohranitel.ru") #[img(src="img/mail.svg" alt="")] info@lesohranitel.ru
+                div.contacts-item
+                    div.contacts-item__image
+                        img(src="img/contact3.png", alt="")
+                    h3 Техническая поддержка:
+                    a(href="mailto:help@lesohranitel.ru") #[img(src="img/mail.svg" alt="")] help@lesohranitel.ru
+                div.contacts-item
+                    div.contacts-item__image
+                        img(src="img/contact4.png", alt="")
+                    h3 Городской телефонный номер:
+                    a(href="tel:+78112222888") #[img(src="img/phone.svg" alt="")] 8 8112 222 888
+                div.contacts-item
+                    div.contacts-item__image
+                        img(src="img/contact5.png", alt="")
+                    h3 Бесплатный номер для звонков по России:
+                    a(href="tel:+78002008201") #[img(src="img/phone.svg" alt="")] 8 800 200 8 201
+                div.contacts-item.contacts-item--main
+                    h3 Директор ООО "Формоза-Сервис"
+                    p #[img(src="img/person.svg" alt="")] Горяченков Дмитрий Анатольевич
+                    a(href="mailto:service@formoza.pskov.ru") #[img(src="img/mail.svg" alt="")] service@formoza.pskov.ru
+                    a(href="tel:+79118880500") #[img(src="img/phone.svg" alt="")] +7 911 888 05 00
+            div.map

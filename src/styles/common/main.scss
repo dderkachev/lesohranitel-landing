@@ -609,3 +609,122 @@
         }
     }
 }
+
+.main--contact {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    &::after {
+        position: absolute;
+        content: '';
+        width: $wrapperSize;
+        height: 795px;
+        top: -120px;
+        left: -80px;
+        right: -80px;
+        background: url('../img/contact-bg-top.png') left bottom no-repeat;
+        background-size: 100%;
+        z-index: -1;
+    }
+
+    h1 {
+        @include substrate();
+        padding: 5px 15px;
+        font-size: 35px;
+        font-family: $fontFamilySub;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin-top: 15px;
+        font-family: $fontFamilySub;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .map {
+        position: relative;
+        margin-left: -80px;
+        margin-right: -80px;
+        margin-bottom: -70px;
+        height: 680px;
+        background: url('../img/contact-bg-bottom.png') center no-repeat;
+        background-size: cover;
+        z-index: -1;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 120px;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: $fontFamilyDefault;
+    &-item {
+        padding: 5px 15px;
+        width: 400px;
+        margin-bottom: 20px;
+        background-color: rgba(121, 121, 121, 0.8);
+        border-radius: 10px;
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        h3 {
+            padding: 0 10px;
+            color: #ffffff;
+        }
+
+        p,
+        a {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-family: $fontFamilyDefault;
+            font-weight: 700;
+            color: #ffffff;
+            img {
+                position: absolute;
+                top: calc(50% - 10px);
+                left: 0;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &--main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: $subColor;
+            text-align: left;
+        }
+    }
+
+    &-item__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+    }
+}
