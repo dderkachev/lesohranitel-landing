@@ -465,7 +465,7 @@
                 border-radius: 10px;
                 background: $subColor;
                 font-family: $fontFamilyDefault;
-                font-size: 23px;
+                font-size: 21px;
                 font-weight: bold;
             }
 
@@ -829,7 +829,7 @@
                 margin-top: 10px;
                 padding: 0;
                 font-family: $fontFamilyDefault;
-                font-size: 21px;
+                font-size: 18px;
                 background: transparent;
                 color: #ffffff;
                 text-transform: none;
@@ -839,6 +839,24 @@
             align-items: flex-start;
             padding: 0;
             background: transparent;
+        }
+    }
+
+    &__item--eleventh {
+        text-align: center;
+        .info-block {
+            text-align: left;
+        }
+        .item-row__block--substrate {
+            @include substrate-block();
+            margin-right: 0;
+            p {
+                margin: 0;
+                padding: 0;
+                font-family: $fontFamilyDefault;
+                font-size: 18px;
+                text-transform: none;
+            }
         }
     }
 }
