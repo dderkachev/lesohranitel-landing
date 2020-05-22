@@ -859,6 +859,20 @@
             }
         }
     }
+
+    &__item--twelfth {
+        text-align: center;
+        .info-block {
+            text-align: left;
+        }
+    }
+
+    &__item--thirteenth {
+        text-align: center;
+        .info-block {
+            text-align: left;
+        }
+    }
 }
 
 .main--partner {
