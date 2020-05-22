@@ -898,6 +898,12 @@
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
+        .item-row__block {
+            display: block;
+            p {
+                padding: 0;
+            }
+        }
     }
 
     &__item--eleventh {
