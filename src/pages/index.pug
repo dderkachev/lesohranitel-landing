@@ -65,8 +65,8 @@ block content
         div.tab-content__item.tab-content__item--third
           h2.item-header.item-header--tc Комплексная платформа
           div.item-row
-            p.item-row__text.item-row__text--tc.item-row__text--pl.item-row__text--pr Медиа Архив видеоданных и зафиксированных событий #[span.item-row__text-bage 03.]
-            p.item-row__text.item-row__text--fw.item-row__text--tc  Медиа Архив работает со всеми типами данных и с картографической привязкой упорядоченно хранит всю информацию системы: маршруты патрулей, события, реакцию пользователей, видео, фото, и т.д.
+            p.item-row__text.item-row__text--tc.item-row__text--pl.item-row__text--pr.item-row__text--fw.item-row__text--sub Медиа Архив видеоданных и зафиксированных событий #[span.item-row__text-bage 03.]
+            p.item-row__text.item-row__text--tc.item-row__text--fw  Медиа Архив работает со всеми типами данных и с картографической привязкой упорядоченно хранит всю информацию системы: маршруты патрулей, события, реакцию пользователей, видео, фото, и т.д.
           div.item-row
             div.item-row__block.item-row__block--column
               div.image-block
@@ -80,8 +80,23 @@ block content
               div.info-block
                 span Пример данных их архива:   
                 p Отчёт о выполненной миссии беспилотника: фотографии, маршрут, точки съемки, полигон интереса, правило склейки
-        div.tab-content__item
-          p Содержимое 4 блока
+        div.tab-content__item.tab-content__item--fourth
+          h2.item-header.item-header--tc Комплексная платформа
+          div.item-row
+            p.item-row__text.item-row__text--tc.item-row__text--pl.item-row__text--pr.item-row__text--fw.item-row__text--sub Географическая информационная система #[span.item-row__text-bage 04.]
+          div.item-row
+            div.item-row__block.item-row__block--row
+              p Карты, используемые в системе, являются векторными многослойными, где к каждому объекту может быть привязана информация (лётные карты, лесничества, силы и средства, арендные участки, вырубки, посадки, дорожная сеть с текущими работами, мосты, зоны отдыха, объекты ЖКХ и т.д.).
+              img(src="img/row4-img1.png", alt="")
+          div.item-row.item-row--fc
+            div.item-row__block.item-row__block--sub
+              p Слои могут быть созданы в Лесохранителе и периодически обновляться «своими силами» или по заказу, а также могут быть подключены любые.
+            div.item-row__block
+              p Публичная кадастровая карта и все доступные на сегодняшний день подосновы есть в системе.
+            div.item-row__block
+              p В Лесохранитель могут быть подключены топо- и ортофотопланы, векторные слои и базы данных других систем.
+            div.item-row__block.item-row__block--sub
+              p В «Лесохранителе» используются Метеоданные из открытых официальных источников. Возможно размещение и подключение к Лесохранителю метеостанций Заказчика.
         div.tab-content__item
           p Содержимое 5 блока
         div.tab-content__item
@@ -94,6 +109,37 @@ block content
           p Содержимое 9 блока
         div.tab-content__item
           p Содержимое 10 блока
+    section.section.section--tab-content
+      div.content-container#content-container-4
+        div.content-row.content-row--info
+          div.content-block.content-block--info
+            div.image-block
+              img(src="img/row4-img2.png", alt="")
+            div.info-block
+              span Пример Московской области:   
+              p Лесохранитель интегрирован с РГИС – ГИС - системой региона. Справа - перечень слоёв.
+          div.content-block.content-block--info
+            div.image-block
+              img(src="img/row4-img3.png", alt="")
+            div.info-block
+              span Пример сопоставления границ:
+              ul
+                li - Свалки твердых бытовых отходов и её защитной зоны
+                li - Водоохранных зон
+                li - Прибрежных защитных полос
+                li - Сельхозугодий 
+          div.content-block.content-block--info
+            div.image-block
+              img(src="img/row4-img4.png", alt="")
+            div.info-block
+              span Пример маршрутизации с учётом дорожной обстановки: 
+              p В этот же интерфейс может быть подключена любая другая техника, оснащенная разными датчиками ГЛОНАСС - городские и областные автобусы, машины скорой помощи, патрульные МВД и т.д.
+          div.content-block.content-block--info
+            div.image-block
+              img(src="img/row4-img5.png", alt="")
+            div.info-block
+              span Пример работы на планшете локально без доступа к интернету:   
+              p Расчет маршрута движения к заданной точке (дым, пожар)
     section.section.section--slider.section--slider-bg
       h3 Как это выглядит
       div.slider-views
