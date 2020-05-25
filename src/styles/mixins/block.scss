@@ -1,0 +1,32 @@
+@import "../utils/variables";
+
+@mixin block-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    .content-text {
+        width: 50%;
+        padding: 10px;
+        &--left {
+            padding-right: 120px;
+            background: $subColor;
+            border-radius: 10px 0 0 10px;
+        }
+        &--right {
+            padding-left: 120px;
+            background: $defaultColor;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+    img {
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 105px);
+        width: 210px;
+        height: 225px; 
+    }
+}

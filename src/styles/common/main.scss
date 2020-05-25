@@ -1,6 +1,7 @@
 @import "../utils/variables";
 @import "../mixins/wrapper";
 @import "../mixins/substrate";
+@import "../mixins/block.scss";
 @import "../mixins/slider.scss";
 
 .main {
@@ -112,6 +113,24 @@
             &.active {
                 display: block;
             }
+            &#content-container-8 {
+                padding: 0 100px;
+                .content-block--def,
+                .content-block--sub {
+                    margin: 0;
+                    font-family: $fontFamilyDefault;
+                    font-size: 21px;
+                    color: #ffffff;
+                    padding: 5px 120px;
+                    border-radius: 10px;
+                }
+                .content-block--sub {
+                    width: 100%;
+                    margin: 0 50px;
+                    padding: 5px 20px;
+                    font-weight: 700;
+                }
+            }
         }
         .content-row {
             display: flex;
@@ -127,6 +146,9 @@
                     margin: 0 15px;
                     margin-bottom: 30px;
                 }
+            }
+            &--center {
+                justify-content: center;
             } 
         }
         .content-block {
@@ -214,6 +236,13 @@
             &--substrate {
                 @include substrate-block();
             }
+            &--block-logo {
+                @include block-logo();
+            }
+        }
+        .content-text {
+            font-family: $fontFamilyDefault;
+            font-size: 21px;
         }
     }
 
@@ -895,6 +924,32 @@
             align-items: flex-start;
             padding: 0;
             background: transparent;
+        }
+    }
+
+    &__item--eighth {
+        text-align: center;
+        .info-block {
+            text-align: left;
+        }
+        .item-row--row {
+            margin: 0 -20px;
+            .item-row__block {
+                @include substrate-block();
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: calc(100% / 2 - 40px);
+                margin: 0 20px;
+                margin-bottom: 30px;
+                p {
+                    margin: 0;
+                    padding: 0 40px;
+                    font-family: $fontFamilyDefault;
+                    font-size: 18px;
+                    text-transform: none;
+                }
+            }
         }
     }
 
