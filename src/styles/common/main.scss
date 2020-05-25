@@ -113,6 +113,19 @@
             &.active {
                 display: block;
             }
+            &#content-container-7 {
+                .content-block--sub {
+                    width: 100%;
+                    padding: 5px 20px;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    font-family: $fontFamilyDefault;
+                    font-weight: 700;
+                    color: #ffffff;
+                    border-radius: 10px;
+                }
+            }
             &#content-container-8 {
                 padding: 0 100px;
                 .content-block--def,
@@ -924,6 +937,53 @@
             align-items: flex-start;
             padding: 0;
             background: transparent;
+        }
+    }
+
+    &__item--seventh {
+        text-align: center;
+        .item-row__block--substrate {
+            @include substrate-block();
+            margin-right: 0;
+            p {
+                margin: 0;
+                padding: 0;
+                font-family: $fontFamilyDefault;
+                font-size: 18px;
+                text-transform: none;
+            }
+        }
+        .item-row__block {
+            .item-row__text {
+                margin: 0;
+                margin-top: 10px;
+                padding: 5px 10px;
+                font-family: $fontFamilyDefault;
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: none;
+                &--sub {
+                    font-weight: 700;
+                }
+            }
+            &--info {
+                flex-direction: column;
+                align-items: flex-start;
+                p {
+                    padding: 0;
+                }
+            }
+        }
+        .item-row--contain {
+            display: flex;
+            justify-content: space-between;
+            .item-row--row {
+                width: calc(100% - 261px);
+                margin: 0 -20px;
+            }
+            img {
+                margin-bottom: 20px;
+            }
         }
     }
 
