@@ -1068,6 +1068,84 @@
         .info-block {
             text-align: left;
         }
+        .content-block--block-logo {
+            @include block-logo();
+        }
+        .content-text {
+            font-family: $fontFamilyDefault;
+            font-size: 18px;
+        }
+        .item-row__text--def {
+            margin: 20px auto;
+            margin-top: 0;
+        }
+        .item-row--table {
+            @include border( 5px, solid, #00a100, 0);
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 15px;
+            background-color: #ffffff;
+            .item-row__block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 0;
+                margin: 0;
+                padding: 10px;
+                font-family: $fontFamilyDefault;
+                color: #212121;
+                background-color: rgb(242, 242, 242);
+                max-width: 215px;
+                &--center {
+                    flex-grow: 1;
+                    max-width: 360px;
+                    background-color: rgb(250, 250, 250);
+                    ul {
+                        column-count: 2;
+                    }
+                }
+
+                p {
+                    padding: 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: none;
+                }
+
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+                    text-align: left;
+                    align-self: flex-start;
+                    font-size: 17px;
+                    span {
+                        color: #e66404;
+                    }
+                }
+
+                img {
+                    margin-top: auto;
+                }
+            }
+        }
+        .btn {
+            @include btn();
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            padding-right: 40px;
+            white-space: nowrap;
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - 7px);
+                right: 15px;
+                width: 12px;
+                height: 12px;
+                background: url("../img/play.svg") center no-repeat;
+                background-size: contain;
+            }
+        }
     }
 
     &__item--sixth {
