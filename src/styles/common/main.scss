@@ -1641,3 +1641,227 @@
         height: 85px;
     }
 }
+
+.main--payment {
+    h1 {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 35px;
+        font-family: $fontFamilySub;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+            @include substrate();
+            padding: 5px 15px;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.description {
+    &-item {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        margin-bottom: 30px;
+    }
+    &-item__block {
+        width: calc(100% / 2 - 30px);
+        margin: 0 15px;
+        padding: 15px;
+        font-family: $fontFamilyDefault;
+        &--substrate {
+            @include substrate-block();
+            margin-bottom: 30px;
+            text-align: left;
+            font-size: 17px;
+            a {
+                @include btn();
+                position: relative;
+                padding: 10px 25px;
+                padding-right: 40px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+                white-space: nowrap;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: calc(50% - 6px);
+                    right: 15px;
+                    width: 12px;
+                    height: 12px;
+                    background: url("../img/next.svg") center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        &--fw {
+            @include substrate();
+            width: 100%;
+            padding: 10px 50px;
+            font-size: 21px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: none;
+            &::after {
+                display: none;
+            }
+        }
+        &--sub {
+            @include substrate();
+            margin-bottom: 30px;
+            padding: 15px;
+            font-size: 20px;
+            background: $subColor;
+            &-center {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &--border {
+            @include border(5px, solid, #00a100, 10px);
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        &--image {
+            @include border(10px, solid, #00a100, 10px);
+            position: relative;
+            padding: 0;
+            min-height: 240px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                transform: translate(-50%, 0);
+                left: 50%;
+                top: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+        .count {
+            text-align: center;
+            &-wrapper {
+                display: inline-block;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #e6e6e6;
+            }
+        }
+        .item-text {
+            text-align: center;
+            &--def {
+                @include substrate();
+                margin: 20px 0;
+                padding: 10px 20px;
+                font-size: 20px;
+            }
+            &--calc {
+                @include text-shadow();
+                span {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .form {
+            &-field {
+                display: flex;
+                align-items: center;
+                padding: 5px 15px;
+                margin-bottom: 20px;
+                background-color: #fafafa;
+                border-radius: 5px;
+                p {
+                    width: calc(100% - 180px);
+                    font-size: 20px;
+                }
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 180px;
+                    label {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.feedback {
+    @include border(5px, solid, #00a100, 5px);
+    margin-bottom: 100px;
+    .form {
+        padding: 15px;
+        &-field {
+            display: flex;
+            padding: 10px;
+            min-height: 85px;
+            &:nth-of-type(odd) {
+                background-color: #f2f2f2;
+            }
+            &:nth-of-type(even) {
+                background-color: #fafafa;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+                width: 40%;
+                min-width: 280px;
+                font-family: $fontFamilyDefault;
+                font-size: 17px;
+            }
+
+            &__item {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 1px;
+                    background-color: #cccccc;
+                }
+
+                .input {
+                    display: flex;
+                    flex-direction: column;
+                    width: calc(100% / 3);
+                    padding: 0 10px;
+                    text-align: center;
+                    label {
+                        font-family: $fontFamilyDefault;
+                        font-size: 17px;
+                    }
+                    // input {
+                    //     outline: none;
+                    //     opacity: 0;
+                    // }
+                    span {
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}

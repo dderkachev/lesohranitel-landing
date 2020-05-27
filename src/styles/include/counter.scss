@@ -1,0 +1,54 @@
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6e6e6;
+    border-radius: 5px;
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        opacity: 1;
+        cursor: pointer;
+        img {
+            width: 12px;
+            height: 12px;
+        }
+        &--minus {
+            border-radius: 5px 0 0 5px;
+        }
+        &--plus {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    &-number {
+        position: relative;
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            top: 5px;
+            bottom: 5px;
+            width: 1px;
+            background-color: #cccccc;
+        }
+
+        &::after {
+            left: 0;
+        }
+
+        &::before {
+            right: 0;
+        }
+
+        input {
+            width: 32px;
+            height: 32px;
+            border: 0;
+            text-align: center;
+            background-color: transparent;
+            outline: none;
+        }
+    }
+}
