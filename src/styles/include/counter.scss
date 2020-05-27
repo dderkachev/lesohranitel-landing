@@ -1,9 +1,12 @@
+@import "../utils/variables";
+
 .counter {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #e6e6e6;
     border-radius: 5px;
+    margin: auto;
     &-item {
         display: flex;
         justify-content: center;
@@ -43,9 +46,11 @@
         }
 
         input {
-            width: 32px;
+            width: 45px;
             height: 32px;
             border: 0;
+            font-family: $fontFamilyDefault;
+            font-size: 21px;
             text-align: center;
             background-color: transparent;
             outline: none;

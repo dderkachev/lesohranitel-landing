@@ -35,3 +35,85 @@
     border: $size $type $color;
     border-radius: $radius;
 }
+
+@mixin radio($count, $row: false) {
+    width: calc(100% / #{$count});
+    padding: 0 10px;
+    text-align: center;
+
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+        & + label {
+            position: relative;
+            display: inline-block;
+            font-family: $fontFamilyDefault;
+            font-size: 17px;
+            padding-top: 28px;
+            cursor: pointer;
+            @if $row {
+                padding-top: 0;
+                padding-left: 30px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                left: calc(50% - 9px);
+                top: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                background: #e6e6e6;
+                @if $row {
+                    top: 1px;
+                    left: 0;
+                }
+            }
+            &:after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: #ffffff;
+                position: absolute;
+                top: 5px;
+                left: calc(50% - 4px);
+                border-radius: 100%;
+                transition: all 0.2s ease;
+                @if $row {
+                    top: 6px;
+                    left: 5px;
+                }
+            }
+        }
+    }
+
+    [type="radio"]:checked {
+        & + label:after {
+            opacity: 1;
+            background: #00a200;
+        }
+    }
+}
+
+@mixin input() {
+    padding: 15px 10px 15px 40px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: $fontFamilySub;
+    font-weight: 600;
+
+    &::placeholder,
+    &::-moz-placeholder,
+    &::-ms-placeholder,
+    &::-webkit-input-placeholder {
+        color: #000000;
+        opacity: 1;
+        &:focus {
+            opacity: 1;
+        }
+    }
+    
+}

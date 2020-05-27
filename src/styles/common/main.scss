@@ -1669,6 +1669,124 @@
     }
 }
 
+.circle {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    min-height: 934px;
+    .circle-bg{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    &-item {
+        @include substrate();
+        position: absolute;
+        text-align: center;
+        padding-top: 40px;
+        max-width: 280px;
+        min-height: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &:nth-of-type(even) {
+            background: $subColor;
+        }
+
+        p {
+            font-family: $fontFamilySub;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        img {
+            position: absolute;
+            top: -30px;
+            left: calc(50% - 70px);
+        }
+
+        &--left {
+            img {
+                left: 0;
+            }
+        }
+
+        &--right {
+            img {
+                left: unset;
+                right: -40px;
+            }
+        }
+
+        &--one {
+            top: 50px;
+            left: calc(50% - 140px);
+            img {
+                left: calc(50% - 45px);
+            }
+        }
+
+        &--two {
+            top: 150px;
+            right: 0;
+        }
+
+        &--three {
+            top: calc(50% - 50px);
+            right: 0;
+            img {
+                top: -70px;
+            }
+        }
+
+        &--four {
+            bottom: 100px;
+            right: 0;
+            img {
+                top: -65px;
+            }
+        }
+
+        &--five {
+            bottom: 50px;
+            right: calc(50% - 140px);
+            img {
+                top: -80px;
+            }
+        }
+
+        &--six {
+            bottom: 100px;
+            left: 50px;
+        }
+
+        &--seven {
+            top: calc(50% - 10px);
+            left: 0;
+            padding-top: 0;
+            min-height: unset;
+            img {
+                top: -165px;
+                right: -180px;
+            }
+        }
+
+        &--eight {
+            top: 150px;
+            left: 20px;
+            img {
+                top: -70px;
+            }
+        }
+    }
+}
+
 .description {
     &-item {
         display: flex;
@@ -1685,7 +1803,7 @@
             @include substrate-block();
             margin-bottom: 30px;
             text-align: left;
-            font-size: 17px;
+            font-size: 21px;
             a {
                 @include btn();
                 position: relative;
@@ -1722,7 +1840,7 @@
             @include substrate();
             margin-bottom: 30px;
             padding: 15px;
-            font-size: 20px;
+            font-size: 21px;
             background: $subColor;
             &-center {
                 display: flex;
@@ -1764,7 +1882,7 @@
                 @include substrate();
                 margin: 20px 0;
                 padding: 10px 20px;
-                font-size: 20px;
+                font-size: 21px;
             }
             &--calc {
                 @include text-shadow();
@@ -1791,8 +1909,8 @@
                     align-items: center;
                     justify-content: center;
                     width: 180px;
-                    label {
-                        font-size: 20px;
+                    .input {
+                        @include radio(2, $row: true);
                     }
                 }
             }
@@ -1831,7 +1949,7 @@
                 position: relative;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 width: 60%;
                 &::before {
                     position: absolute;
@@ -1844,23 +1962,66 @@
                 }
 
                 .input {
-                    display: flex;
-                    flex-direction: column;
-                    width: calc(100% / 3);
-                    padding: 0 10px;
+                    @include radio(3);
+                }
+            }
+        }
+        &-submit {
+            display: flex;
+            margin: 35px 100px;
+            padding: 25px 30px;
+            border: 1px solid #e6e6e6;
+            box-sizing: border-box;
+            box-shadow: 0 0 60px 0px rgba(0,0,0,0.1);
+            &__item {
+                position: relative;
+                width: calc(100% / 5 - 20px);
+                margin: 0 10px;
+                input {
+                    @include input();
+                    width: 100%;
+                }
+                img {
+                    position: absolute;
+                    top: calc(50% - 7px);
+                    left: 15px;
+                    width: 14px;
+                    height: 14px;
+                }
+
+                &:last-child {
                     text-align: center;
-                    label {
-                        font-family: $fontFamilyDefault;
-                        font-size: 17px;
+                }
+
+                &:first-child {
+                    input {
+                        padding: 15px 40px 15px 10px;
                     }
-                    // input {
-                    //     outline: none;
-                    //     opacity: 0;
-                    // }
-                    span {
-                        position: relative;
+                    img {
+                        left: unset;
+                        right: 15px; 
                     }
                 }
+            }
+        }
+
+        .btn {
+            @include btn();
+            width: 100%;
+            position: relative;
+            padding-right: 40px;
+            margin-right: 15px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - 6px);
+                right: 15px;
+                width: 12px;
+                height: 12px;
+                background: url("../img/next.svg") center no-repeat;
+                background-size: contain;
             }
         }
     }

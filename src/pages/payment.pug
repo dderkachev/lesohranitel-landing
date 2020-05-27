@@ -1,10 +1,21 @@
 extends common/layoutSub
 
-mixin radio(label, name)
-    label= label
-        input(type="radio" name = name)
-        span
+mixin radio(label, name, id)
+    input(type="radio", name = name, id = id)
+    label(for = id)= label
 
+mixin input(placeholder, path, id)
+    input(type="text", placeholder = placeholder, id = id)
+    img(src = 'img/' + path + '.svg', alt="")
+
+mixin circle-item(path, text1, text2, cl)
+    div(class= 'circle-item ' + cl)
+        img(src = 'img/' + path + '.png', alt="")
+        p= text1
+        if text2
+            if text2 != ''
+            p= text2
+    
 block content
     main.main.main--payment
         h1 Расчет стоимости
@@ -12,6 +23,15 @@ block content
             span Жизненный цикл
             span Системы мониторинга пожаров
         section.circle
+            +circle-item('circle1', 'Анализ потребностей', '', 'circle-item--one')
+            +circle-item('circle2', 'Проект', 'Смета', 'circle-item--two')
+            +circle-item('circle3', 'Бюджет', '', 'circle-item--three')
+            +circle-item('circle4', 'Закупочные процедуры', '', 'circle-item--four')
+            +circle-item('circle5', 'Разработка', 'Строительство', 'circle-item--five')
+            +circle-item('circle6', 'Приемка', '', 'circle-item--left circle-item--six')
+            +circle-item('circle7', 'Внедрение', '', 'circle-item--right circle-item--seven')
+            +circle-item('circle8', 'Эксплуатация', 'Поддержка', 'circle-item--eight')
+            img(src="img/circle-bg.png", alt="")
         section.description
             div.description-item
                 div.description-item__block.description-item__block--substrate
@@ -33,8 +53,10 @@ block content
                         div.form-field
                             p У вас есть собственный сервер (оборудование)?
                             div.form-field__item
-                                +radio('Да', 'own')
-                                +radio('Нет', 'own')
+                                div.input
+                                    +radio('Да', 'own', 'radio22')
+                                div.input
+                                    +radio('Нет', 'own', 'radio23')
                         div.form-field
                             p Количество точек мониторинга (видеокамер):
                             div.form-field__item
@@ -44,9 +66,9 @@ block content
                             div.form-field__item
                                 include includes/counter
                     p.item-text.item-text--def Стоимость неисключительной лицензии на использование программного обеспечения «Лесохранитель» на 10 камер 6 месяцев составит:
-                        div.count
-                            div.count-wrapper
-                                p.item-text.item-text--calc #[span 35.000] рублей
+                    div.count
+                        div.count-wrapper
+                            p.item-text.item-text--calc #[span 35.000] рублей
                 div.description-item__block.description-item__block--sub
                     p.item-text Использование программного Модуля автоматического распознавания лесных пожаров «Пожарный сторож», установленного на платформу видеокамер (только для оборудования AXIS), существенно ускорит процесс автоматического обнаружения, снизит нагрузку на сервер и позволит сэкономить на каналах связи.
                     p.item-text.item-text--def Стоимость бессрочной лицензии «Пожарный сторож» - 35 000 рублей на каждую камеру.
@@ -57,7 +79,7 @@ block content
                 div.description-item__block.description-item__block--substrate
                     p Создание системы видеомониторинга на базе программного обеспечения «Лесохранитель» включает в себя выбор оптимального расположения точек мониторинга, проектирование, поставку и монтаж оборудования, установку и настройку программного обеспечения, обеспечение функционирования каналов связи и интеграцию всех составляющих в единую эффективную систему, оберегающую лес от пожаров.
                 div.description-item__block.description-item__block--substrate
-                    p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="#") наши контакты] или к нашим партнёрам #[a(href="#") наши партнёры].
+                    p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="#") наши контакты] или к нашим партнёрам #[a(href="#") наши партнёры]
                 div.description-item__block.description-item__block--fw.description-item__block--sub
                     p Пожалуйста, ответьте на вопросы.
                     p Если затрудняетесь ответить, просто заполните контактные данные и мы с Вами свяжемся. 
@@ -71,11 +93,11 @@ block content
                     p Серверное оборудование
                     div.form-field__item
                         div.input
-                            +radio('Уже имеем', 'one')
+                            +radio('Уже имеем', 'one', 'radio1')
                         div.input
-                            +radio('Будем приобретать', 'one')
+                            +radio('Будем приобретать', 'one', 'radio2')
                         div.input
-                            +radio('Будем работать «в облаке»', 'one')
+                            +radio('Будем работать «в облаке»', 'one', 'radio3')
                 div.form-field
                     p Сколько месяцев в году будет использоваться система
                     div.form-field__item
@@ -88,65 +110,64 @@ block content
                     p Собираетесь ли Вы использовать инструмент «Видеостена»
                     div.form-field__item
                         div.input
-                            +radio('Хотим подключить к системе имеющуюся модель: XX', 'two')
+                            +radio('Хотим подключить к системе имеющуюся модель: XX', 'two', 'radio4')
                         div.input
-                            +radio('Хотим приобрести', 'two')
+                            +radio('Хотим приобрести', 'two', 'radio5')
                         div.input
-                            +radio('Решим позже', 'two')
+                            +radio('Решим позже', 'two', 'radio6')
                 div.form-field
                     p Собираетесь ли Вы использовать комплексы мониторинга на базе беспилотных летательных аппаратов
                     div.form-field__item
                         div.input
-                            +radio('Хотим подключить к системе имеющиеся ХХ штук', 'three')
+                            +radio('Хотим подключить к системе имеющиеся ХХ штук', 'three', 'radio7')
                         div.input
-                            +radio('Хотим приобрести ХХ штук', 'three')
+                            +radio('Хотим приобрести ХХ штук', 'three', 'radio8')
                         div.input
-                            +radio('Решим позже', 'three')
+                            +radio('Решим позже', 'three', 'radio9')
                 div.form-field
                     p Собираетесь ли Вы использовать комплексы мониторинга на базе «фотоловушек»
                     div.form-field__item
                         div.input
-                            input(type="radio" name='four')
-                            label Хотим подключить к системе имеющуюся модель: ХХ
+                            +radio('Хотим подключить к системе имеющуюся модель: ХХ', 'four', 'radio10')
                         div.input
-                            input(type="radio" name='four')
-                            label Хотим приобрести
+                            +radio('Хотим приобрести', 'four', 'radio11')
                         div.input
-                            input(type="radio" name='four')
-                            label Решим позже
+                            +radio('Решим позже', 'four', 'radio12')
                 div.form-field
                     p Нужно ли Вам управление силами и средствами - отображение реальных позиций техники, людей, беспилотников с выдачей заданий и контролем?
                     div.form-field__item
                         div.input
-                            input(type="radio" name='five')
-                            label Хотим подключить к системе имеющиеся ХХ датчиков ГЛОНАСС техники и ХХ телефонов сотрудников
+                            +radio('Хотим подключить к системе имеющиеся ХХ датчиков ГЛОНАСС техники и ХХ телефонов сотрудников', 'five', 'radio13')
                         div.input
-                            input(type="radio" name='five')
-                            label Хотим приобрести ХХ датчиков ГЛОНАСС для техники и ХХ телефонов для сотрудников
+                            +radio('Хотим приобрести ХХ датчиков ГЛОНАСС для техники и ХХ телефонов для сотрудников', 'five', 'radio14')                            
                         div.input
-                            input(type="radio" name='five')
-                            label Решим позже
+                            +radio('Решим позже', 'five', 'radio15')
                 div.form-field
                     p Нужно ли Вам мобильное приложение для авиапатрулирования?
                     div.form-field__item
                         div.input
-                            input(type="radio" name='six')
-                            label Хотим подключить к системе имеющиеся ХХ планшеты/смартфоны летчиков
+                            +radio('Хотим подключить к системе имеющиеся ХХ планшеты/смартфоны летчиков', 'six', 'radio16')
                         div.input
-                            input(type="radio" name='six')
-                            label Хотим приобрести ХХ планшетов/смартфонов для летчиков с мобильным приложением
+                            +radio('Хотим приобрести ХХ планшетов/смартфонов для летчиков с мобильным приложением', 'six', 'radio17')
                         div.input
-                            input(type="radio" name='six')
-                            label Решим позже
+                            +radio('Решим позже', 'six', 'radio18')
                 div.form-field
                     p Схема использования системы
                     div.form-field__item
                         div.input
-                            input(type="radio" name='seven')
-                            label Приобретение в собственность с последующим ежегодным
+                            +radio('Приобретение в собственность с последующим ежегодным', 'seven', 'radio19') 
                         div.input
-                            input(type="radio" name='seven')
-                            label Пользование системой как сервисом (ежегодная услуга)
+                            +radio('Пользование системой как сервисом (ежегодная услуга)', 'seven', 'radio20') 
                         div.input
-                            input(type="radio" name='seven')
-                            label Пользование системой как сервисом с последующим выкупом
+                            +radio('Пользование системой как сервисом с последующим выкупом', 'seven', 'radio21')
+                div.form-submit
+                    div.form-submit__item
+                        +input('Ваш регион', 'arrow-black', 'input-region')
+                    div.form-submit__item
+                        +input('Ваше имя', 'person-black', 'input-firstname')
+                    div.form-submit__item
+                        +input('Ваша почта', 'mail-black', 'input-mail')
+                    div.form-submit__item
+                        +input('Ваш телефон', 'phone-black', 'input-phone')
+                    div.form-submit__item
+                        a.btn(href="") Отправить
