@@ -117,3 +117,15 @@
     }
     
 }
+
+@mixin arrow-circle($top, $right, $rotate) {
+    position: absolute;
+    content: '';
+    top: $top;
+    right: $right;
+    width: 110px;
+    height: 60px;
+    background: url('../img/circle-arrow.png') center no-repeat;
+    background-size: contain;
+    transform: rotate($rotate);
+}
