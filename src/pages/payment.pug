@@ -79,7 +79,7 @@ block content
                             p Количество месяцев использования:
                             div.form-field__item
                                 +counter('counter2', 'counter2-input', 'counter2-plus', 'counter2-minus')
-                    p.item-text.item-text--def Стоимость неисключительной лицензии на использование программного обеспечения «Лесохранитель» на #[span#count2 1] камер #[span#count3 1] месяцев составит:
+                    p.item-text.item-text--def Стоимость неисключительной лицензии на использование программного обеспечения «Лесохранитель» на #[span#count2 1] #[span#title2 камеру] #[span#count3 1] #[span#title3 месяц] составит:
                     div.count
                         div.count-wrapper
                             p.item-text.item-text--calc #[span#count1 8.900] рублей
@@ -101,7 +101,7 @@ block content
                 p Пожалуйста, ответьте на вопросы.
                 p Если затрудняетесь ответить, просто заполните контактные данные и мы с Вами свяжемся.
             div.feedback-wrapper
-                form.form
+                form(method='post').form
                     div.form-field
                         p Предпологаемое количество точек мониторинга (камер)
                         div.form-field__item
@@ -178,8 +178,21 @@ block content
                             div.input
                                 +radio('Пользование системой как сервисом с последующим выкупом', 'seven', 'radio21')
                     div.form-submit
-                        div.form-submit__item
-                            +input('Ваш регион', 'arrow-black', 'input-region')
+                        div.form-submit__item.form-submit__item--select
+                            input(id="select-input", type="text", placeholder="Ваш регион" readonly)
+                            img(src='img/arrow-black.svg', alt="", id="select-image")
+                            div#select-menu-wrapper.select-menu-wrapper
+                                ul.select-menu
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Воронежская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
+                                    li.select-menu__item Псковская область
                         div.form-submit__item
                             +input('Ваше имя', 'person-black', 'input-firstname')
                         div.form-submit__item

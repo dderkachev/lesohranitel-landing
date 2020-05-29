@@ -167,6 +167,18 @@ $(document).ready(function () {
         const formCount = document.getElementById('count1')
         const camerCount = document.getElementById('count2')
         const monthCount = document.getElementById('count3')
+        const camerTitle = document.getElementById('title2')
+        const monthTitle = document.getElementById('title3')
+
+        const select = document.getElementById('select-menu-wrapper')
+        const selectInput = document.getElementById('select-input')
+        const selectImage = document.getElementById('select-image')
+        let selectItems = document.getElementsByClassName('select-menu__item')
+
+        const decl = (number, titles) => {  
+            let cases = [2, 0, 1, 1, 1, 2];
+            return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+        }
 
         const total = (value1, value2, mult) => {
             if (mult) {
@@ -174,6 +186,8 @@ $(document).ready(function () {
                 let format = sumForm.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
                 camerCount.innerHTML = value1
                 monthCount.innerHTML = value2
+                camerTitle.innerHTML = decl(value1, ['камеру', 'камеры', 'камер'])
+                monthTitle.innerHTML = decl(value2, ['месяц', 'месяца', 'месяцев'])
                 formCount.innerHTML = format
             }
             else {
@@ -181,9 +195,31 @@ $(document).ready(function () {
                 let format = sumForm.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
                 camerCount.innerHTML = value1
                 monthCount.innerHTML = value2
+                camerTitle.innerHTML = decl(value1, ['камера', 'камеры', 'камер'])
+                monthTitle.innerHTML = decl(value2, ['месяц', 'месяца', 'месяцев'])
                 formCount.innerHTML = format
             }  
         }
+
+        selectInput.addEventListener('click', () => {
+            selectInput.classList.toggle('active')
+            select.classList.toggle('active')
+        })
+
+        selectImage.addEventListener('click', () => {
+            selectInput.classList.toggle('active')
+            select.classList.toggle('active')
+        })
+        
+        selectItems = Array.from(selectItems)
+
+        selectItems.map((item) => {
+            item.addEventListener('click', () => {
+                selectInput.classList.toggle('active')
+                select.classList.toggle('active')
+                selectInput.value = item.innerText 
+            })
+        })
 
         plusBtn1.addEventListener('click', () => {
             counter1.value++
@@ -282,6 +318,8 @@ $(document).ready(function () {
             form.classList.toggle('active')
             form.scrollIntoView()
         })
+
+        new SimpleBar(select);
     }
     
 });

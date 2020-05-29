@@ -2043,7 +2043,7 @@
     display: none;
     position: relative;
     margin-bottom: 100px;
-    overflow: hidden;
+    // overflow: hidden;
     &::after {
         position: absolute;
         content: '';
@@ -2123,7 +2123,8 @@
                 .input {
                     @include radio(3);
                 }
-            }
+
+            } 
         }
         &-submit {
             display: flex;
@@ -2159,6 +2160,69 @@
                     img {
                         left: unset;
                         right: 15px; 
+                    }
+                }
+
+                &--select {
+                    position: relative;
+
+                    img {
+                        transform: rotate(-90deg);
+                        transition: 0.2s ease-in-out;
+                        cursor: pointer;
+                    }
+
+                    #select-input.active + img {
+                        transform: none;
+                    }
+
+                    #select-input {
+                        color: #060606;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        cursor: pointer;
+                    }
+
+                    .select-menu {
+                        margin: 0;
+                        padding: 10px 15px;
+                        padding-left: 0;
+                        list-style: none;
+                        &-wrapper {
+                            position: absolute;
+                            top: 60px;
+                            left: 0;
+                            right: -50px;
+                            max-height: 200px;
+                            overflow: auto;
+                            background-color: #ffffff;
+                            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+                            border-radius: 0 5px 5px 5px;
+                            box-sizing: border-box;
+                            opacity: 0;
+                            z-index: -5;
+                            transition: 0.2s ease-in-out;
+                            &.active {
+                                opacity: 1;
+                                z-index: 1;
+                            }
+                            .simplebar-track.simplebar-vertical {
+                                top: 10px;
+                                bottom: 10px;
+                            }
+                        }
+
+                        &__item {
+                            padding: 10px 0;
+                            padding-left: 15px;
+                            font-family: $fontFamilyDefault;
+                            font-size: 15px;
+                            cursor: pointer;
+                            transition: 0.2s ease-in-out;
+                            &:hover {
+                                background-color: #fafafa;
+                            }
+                        }
                     }
                 }
             }
