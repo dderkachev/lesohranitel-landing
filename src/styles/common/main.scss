@@ -2249,3 +2249,23 @@
         }
     }
 }
+
+.main--about {
+    padding-top: 40px;
+    text-align: center;
+    h1 {
+        @include substrate();
+        position: relative;
+        margin-bottom: 20px;
+        font-family: $fontFamilyDefault;
+        font-size: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-family: $fontFamilyDefault;
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+}
