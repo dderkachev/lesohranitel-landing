@@ -1,8 +1,11 @@
 extends common/layout
 
+block vars
+  - var pageTitle = 'Главная страница: Лесохранитель - система дистанционного мониторинга и управления'
+
 block content
   main.main
-    section.section.section--tabs
+    section.section.section--tabs#tabs
       div.tab-panel#tab-panel
         ul.tab-panel-wrapper
           li.active <span>01.</span> Автоматизированный видеомониторинг пожаров он-лайн с точным определением координат и моментальным оповещением
@@ -139,7 +142,7 @@ block content
           div.item-row
             p.item-row__text.item-row__text--tc.item-row__text--def Интегрирует аналитические сервисы других систем
           div.item-row
-            a.btn(href="#") Смотреть видеоролик
+            a.btn(href="https://yadi.sk/i/q8hZT0Djkb7O6w" target="_blank") Смотреть видеоролик
         div.tab-content__item.tab-content__item--sixth
           h2.item-header.item-header--tc Комплексная платформа
           div.item-row
@@ -622,7 +625,7 @@ block content
         div.items__item
           img(src="img/item2.png" alt="")
           p Комплексность – 17 подсистем: вся информация, инструменты и отчёты в едином интерфейсе с едиными данными
-          a(href="#") Подробнее
+          a(href="#tabs") Подробнее
         div.items__item
           img(src="img/item3.png" alt="")
           p Все виды мониторинга – наземный, авиационный, космический
@@ -659,7 +662,7 @@ block content
         div.items__item.items__item--large
           img(src="img/item14.png" alt="")
           p Ответственность за систему в целом на одном квалифицированном исполнителе с государственными лицензиями и проверенной репутацией своими специалистами и техникой обеспечиваем весь цикл работ: проектирование, поставка, монтаж, строительство, обучение и поддержка пользователей, модернизация.
-          a(href="#") Подробнее
+          a(href="about.html") Подробнее
     section.section.section--video
       h2 Почему видеомониторинг?
       h3 По сравнению с космическим или авиапатрулированием видеомониторинг в несколько раз более:

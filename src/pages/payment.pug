@@ -24,9 +24,12 @@ mixin counter(id, idSub, idInc, idDec)
         div(id = idDec).counter-item.counter-item--minus
             img(src="img/minus.svg", alt="" )
         div.counter-number
-            input(type="text" value="1" id = idSub)
+            input(type="text" value="1" id = idSub readonly)
         div(id = idInc).counter-item.counter-item--plus
             img(src="img/plus.svg", alt="")
+
+block vars
+    - var pageTitle='Расчет стоимости: Лесохранитель - Расчет стоимости системы';
 
 block content
     main.main.main--payment
@@ -93,7 +96,7 @@ block content
                 div.description-item__block.description-item__block--substrate
                     p Создание системы видеомониторинга на базе программного обеспечения «Лесохранитель» включает в себя выбор оптимального расположения точек мониторинга, проектирование, поставку и монтаж оборудования, установку и настройку программного обеспечения, обеспечение функционирования каналов связи и интеграцию всех составляющих в единую эффективную систему, оберегающую лес от пожаров.
                 div.description-item__block.description-item__block--substrate
-                    p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="#") наши контакты] или к нашим партнёрам #[a(href="#") наши партнёры]
+                    p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="contact.html") наши контакты] или к нашим партнёрам #[a(href="partner.html") наши партнёры]
             div.description-item
                 div#btn-form.description-item__btn запросить предварительный расчёт
         section#form.feedback
