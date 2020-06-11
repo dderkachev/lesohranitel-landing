@@ -14,8 +14,9 @@ html(lang="ru")
         block header
             include header
         block content
-        block footer
-            include footer
+        div.wrapper.wrapper--footer
+            block footer
+                include footer
         block scripts
             script(src='js/main.min.js')
             script(src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js")

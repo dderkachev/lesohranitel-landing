@@ -1,0 +1,106 @@
+mixin input(placeholder, path, id)
+    input(type="text", placeholder = placeholder, id = id)
+    img(src = 'img/' + path + '.svg', alt="")
+
+div#overlay.overlay.hide
+    div#modal.modal.hide
+        form.modal-submit
+            div.select
+                input(id="modal-select-input", type="text", placeholder="Ваш регион" readonly)
+                img(src='img/arrow-black.svg', alt="", id="modal-select-image")
+                div#modal-select-menu-wrapper.select-menu-wrapper
+                    ul.select-menu
+                        li.select-menu__item Республика Адыгея
+                        li.select-menu__item Республика Алтай
+                        li.select-menu__item Республика Башкортостан
+                        li.select-menu__item Республика Бурятия
+                        li.select-menu__item Республика Дагестан
+                        li.select-menu__item Республика Ингушетия
+                        li.select-menu__item Кабардино-Балкарская Республика
+                        li.select-menu__item Республика Калмыкия
+                        li.select-menu__item Карачаево-Черкесская Республика
+                        li.select-menu__item Республика Карелия
+                        li.select-menu__item Республика Коми
+                        li.select-menu__item Республика Крым
+                        li.select-menu__item Республика Марий Эл
+                        li.select-menu__item Республика Мордовия
+                        li.select-menu__item Республика Саха (Якутия)
+                        li.select-menu__item Республика Северная Осетия — Алания
+                        li.select-menu__item Республика Татарстан
+                        li.select-menu__item Республика Тыва
+                        li.select-menu__item Удмуртская Республика
+                        li.select-menu__item Республика Хакасия
+                        li.select-menu__item Чеченская Республика
+                        li.select-menu__item Чувашская Республика
+                        li.select-menu__item Алтайский край
+                        li.select-menu__item Забайкальский край
+                        li.select-menu__item Камчатский край
+                        li.select-menu__item Краснодарский край
+                        li.select-menu__item Красноярский край
+                        li.select-menu__item Пермский край
+                        li.select-menu__item Приморский край
+                        li.select-menu__item Ставропольский край
+                        li.select-menu__item Хабаровский край
+                        li.select-menu__item Амурская область
+                        li.select-menu__item Архангельская область
+                        li.select-menu__item Астраханская область
+                        li.select-menu__item Белгородская область
+                        li.select-menu__item Брянская область
+                        li.select-menu__item Владимирская область
+                        li.select-menu__item Волгоградская область
+                        li.select-menu__item Вологодская область
+                        li.select-menu__item Воронежская область
+                        li.select-menu__item Ивановская область
+                        li.select-menu__item Иркутская область
+                        li.select-menu__item Калининградская область
+                        li.select-menu__item Калужская область
+                        li.select-menu__item Кемеровская область
+                        li.select-menu__item Кировская область
+                        li.select-menu__item Костромская область
+                        li.select-menu__item Курганская область
+                        li.select-menu__item Курская область
+                        li.select-menu__item Ленинградская область
+                        li.select-menu__item Липецкая область
+                        li.select-menu__item Магаданская область
+                        li.select-menu__item Московская область
+                        li.select-menu__item Мурманская область
+                        li.select-menu__item Нижегородская область
+                        li.select-menu__item Новгородская область
+                        li.select-menu__item Новосибирская область
+                        li.select-menu__item Омская область
+                        li.select-menu__item Оренбургская область
+                        li.select-menu__item Орловская область
+                        li.select-menu__item Пензенская область
+                        li.select-menu__item Псковская область
+                        li.select-menu__item Ростовская область
+                        li.select-menu__item Рязанская область
+                        li.select-menu__item Самарская область
+                        li.select-menu__item Саратовская область
+                        li.select-menu__item Сахалинская область
+                        li.select-menu__item Свердловская область
+                        li.select-menu__item Смоленская область
+                        li.select-menu__item Тамбовская область
+                        li.select-menu__item Тверская область
+                        li.select-menu__item Томская область
+                        li.select-menu__item Тульская область
+                        li.select-menu__item Тюменская область
+                        li.select-menu__item Ульяновская область
+                        li.select-menu__item Челябинская область
+                        li.select-menu__item Ярославская область
+                        li.select-menu__item Москва
+                        li.select-menu__item Санкт-Петербург
+                        li.select-menu__item Севастополь
+                        li.select-menu__item Еврейская автономная область
+                        li.select-menu__item Ненецкий автономный округ 
+                        li.select-menu__item Ханты-Мансийский автономный округ - Югра
+                        li.select-menu__item Чукотский автономный округ
+                        li.select-menu__item Ямало-Ненецкий автономный округ
+            div.modal-submit__item
+                +input('Ваше имя', 'person-black', 'modal-input-firstname')
+            div.modal-submit__item
+                +input('Ваша почта', 'mail-black', 'modal-input-mail')
+            div.modal-submit__item
+                +input('Ваш телефон', 'phone-black', 'modal-input-phone')
+            button.btn.btn-submit(type='submit') Отправить
+            div#close
+                img(src="img/close.svg", alt="")

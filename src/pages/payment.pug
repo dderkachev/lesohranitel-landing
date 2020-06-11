@@ -33,174 +33,175 @@ block vars
 
 block content
     main.main.main--payment
-        h1 Расчет стоимости
-        h2 
-            span Жизненный цикл
-            span Системы мониторинга пожаров
-        section.circle
-            +circle-item('circle1', 'Анализ потребностей', '', 'circle-item--one')
-            +circle-item('circle2', 'Проект', 'Смета', 'circle-item--two')
-            +circle-item('circle3', 'Бюджет', '', 'circle-item--three')
-            +circle-item('circle4', 'Закупочные процедуры', '', 'circle-item--four')
-            +circle-item('circle5', 'Разработка', 'Строительство', 'circle-item--five')
-            +circle-item('circle6', 'Приемка', '', 'circle-item--left circle-item--six')
-            +circle-item('circle7', 'Внедрение', '', 'circle-item--right circle-item--seven')
-            +circle-item('circle8', 'Эксплуатация', 'Поддержка', 'circle-item--eight')
-            img(src="img/circle-bg.png", alt="").circle-bg
-            div.circle-bg-transparent
-                img(src="img/transparent.png", alt="")
-        section.description
-            div.description-item
-                div.description-item__block.description-item__block--substrate
-                    p Когда решение о создании системы принято, чтобы правильно оценить и расходы, и будущую эффективность, нужно понимать, из каких этапов и в какой последовательности строится система. Недостаточная проработка хотя бы одного из них может привести к плачевным результатам в итоге. Везде есть шанс ошибиться – неправильно выбрать места установки, не учесть цены на вспомогательное оборудование и материалы или стоимость услуг связи, упростить или наоборот усложнить техническое задание, не проверить работу всех функций при приёмке – и вместо работающей системы можно получить «разборки» с ФАС и суды с Исполнителем.
-                div.description-item__block.description-item__block--substrate
-                    p Чтобы этого избежать, и пилотный проект, и строительство большой системы, и последующая её доработка и дооснащение – должно производиться по данной схеме с тщательным контролем и конкретным ответственным за каждый этап. Решающий фактор эффективности построения системы - выбор оптимального расположения камер. Мы выбираем точки расположения камер на основе оверлей-анализа – находим максимальное покрытие опасных участков зонами видимости камер с учетом: координат и высот антенно-мачтовых сооружений операторов связи, горимости лесов, рельефа, оптической прозрачности атмосферы, имеющихся маршрутов патрулирования и т.д.
-                div.description-item__block.description-item__block--fw
-                    p Мы помогаем Заказчику на каждом этапе, несём ответственность за результат и гарантируем эффективную работу построенной нами системы.
-            div.description-item
-                div.description-item__block.description-item__block--border.description-item__block--image
-                    img(src="img/payment10.png", alt="")
-                div.description-item__block.description-item__block--sub.description-item__block--sub-center
-                    p Анализ расположения камер мы делаем БЕСПЛАТНО с помощью собственного программного обеспечения , и предоставляем Заказчику веб-доступ к карте покрытия мониторингом с правом вносить корректировки.
-                div.description-item__block.description-item__block--fw
-                    p Для предварительной оценки стоимости сезонного использования программного обеспечения «Лесохранитель» без ограничения количества пользователей воспользуйтесь калькулятором:
-            div.description-item
-                div.description-item__block.description-item__block--border
-                    form.form
+        div.wrapper
+            h1 Расчет стоимости
+            h2 
+                span Жизненный цикл
+                span Системы мониторинга пожаров
+            section.circle
+                +circle-item('circle1', 'Анализ потребностей', '', 'circle-item--one')
+                +circle-item('circle2', 'Проект', 'Смета', 'circle-item--two')
+                +circle-item('circle3', 'Бюджет', '', 'circle-item--three')
+                +circle-item('circle4', 'Закупочные процедуры', '', 'circle-item--four')
+                +circle-item('circle5', 'Разработка', 'Строительство', 'circle-item--five')
+                +circle-item('circle6', 'Приемка', '', 'circle-item--left circle-item--six')
+                +circle-item('circle7', 'Внедрение', '', 'circle-item--right circle-item--seven')
+                +circle-item('circle8', 'Эксплуатация', 'Поддержка', 'circle-item--eight')
+                img(src="img/circle-bg.png", alt="").circle-bg
+                div.circle-bg-transparent
+                    img(src="img/transparent.png", alt="")
+            section.description
+                div.description-item
+                    div.description-item__block.description-item__block--substrate
+                        p Когда решение о создании системы принято, чтобы правильно оценить и расходы, и будущую эффективность, нужно понимать, из каких этапов и в какой последовательности строится система. Недостаточная проработка хотя бы одного из них может привести к плачевным результатам в итоге. Везде есть шанс ошибиться – неправильно выбрать места установки, не учесть цены на вспомогательное оборудование и материалы или стоимость услуг связи, упростить или наоборот усложнить техническое задание, не проверить работу всех функций при приёмке – и вместо работающей системы можно получить «разборки» с ФАС и суды с Исполнителем.
+                    div.description-item__block.description-item__block--substrate
+                        p Чтобы этого избежать, и пилотный проект, и строительство большой системы, и последующая её доработка и дооснащение – должно производиться по данной схеме с тщательным контролем и конкретным ответственным за каждый этап. Решающий фактор эффективности построения системы - выбор оптимального расположения камер. Мы выбираем точки расположения камер на основе оверлей-анализа – находим максимальное покрытие опасных участков зонами видимости камер с учетом: координат и высот антенно-мачтовых сооружений операторов связи, горимости лесов, рельефа, оптической прозрачности атмосферы, имеющихся маршрутов патрулирования и т.д.
+                    div.description-item__block.description-item__block--fw
+                        p Мы помогаем Заказчику на каждом этапе, несём ответственность за результат и гарантируем эффективную работу построенной нами системы.
+                div.description-item
+                    div.description-item__block.description-item__block--border.description-item__block--image
+                        img(src="img/payment10.png", alt="")
+                    div.description-item__block.description-item__block--sub.description-item__block--sub-center
+                        p Анализ расположения камер мы делаем БЕСПЛАТНО с помощью собственного программного обеспечения , и предоставляем Заказчику веб-доступ к карте покрытия мониторингом с правом вносить корректировки.
+                    div.description-item__block.description-item__block--fw
+                        p Для предварительной оценки стоимости сезонного использования программного обеспечения «Лесохранитель» без ограничения количества пользователей воспользуйтесь калькулятором:
+                div.description-item
+                    div.description-item__block.description-item__block--border
+                        form.form
+                            div.form-field
+                                p У вас есть собственный сервер (оборудование)?
+                                div.form-field__item
+                                    div.input
+                                        +radio('Да', 'own', 'radio22', 'true')
+                                    div.input
+                                        +radio('Нет', 'own', 'radio23')
+                            div.form-field
+                                p Количество точек мониторинга (видеокамер):
+                                div.form-field__item
+                                    +counter('counter1', 'counter1-input', 'counter1-plus', 'counter1-minus')
+                            div.form-field
+                                p Количество месяцев использования:
+                                div.form-field__item
+                                    +counter('counter2', 'counter2-input', 'counter2-plus', 'counter2-minus')
+                        p.item-text.item-text--def Стоимость неисключительной лицензии на использование программного обеспечения «Лесохранитель» на #[span#count2 1] #[span#title2 камеру] #[span#count3 1] #[span#title3 месяц] составит:
+                        div.count
+                            div.count-wrapper
+                                p.item-text.item-text--calc #[span#count1 8.900] рублей
+                    div.description-item__block.description-item__block--sub
+                        p.item-text Использование программного Модуля автоматического распознавания лесных пожаров «Пожарный сторож», установленного на платформу видеокамер (только для оборудования AXIS), существенно ускорит процесс автоматического обнаружения, снизит нагрузку на сервер и позволит сэкономить на каналах связи.
+                        p.item-text.item-text--def Стоимость бессрочной лицензии «Пожарный сторож» - 35 000 рублей на каждую камеру.
+                        div.count
+                            div.count-wrapper
+                                p.item-text.item-text--calc #[span 35.000] рублей
+                div.description-item
+                    div.description-item__block.description-item__block--substrate
+                        p Создание системы видеомониторинга на базе программного обеспечения «Лесохранитель» включает в себя выбор оптимального расположения точек мониторинга, проектирование, поставку и монтаж оборудования, установку и настройку программного обеспечения, обеспечение функционирования каналов связи и интеграцию всех составляющих в единую эффективную систему, оберегающую лес от пожаров.
+                    div.description-item__block.description-item__block--substrate
+                        p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="contact.html") наши контакты] или к нашим партнёрам #[a(href="partner.html") наши партнёры]
+                div.description-item
+                    div#btn-form.description-item__btn запросить предварительный расчёт
+            section#form.feedback
+                div.feedback-header
+                    p Пожалуйста, ответьте на вопросы.
+                    p Если затрудняетесь ответить, просто заполните контактные данные и мы с Вами свяжемся.
+                div.feedback-wrapper
+                    form(method='post').form
                         div.form-field
-                            p У вас есть собственный сервер (оборудование)?
+                            p Предпологаемое количество точек мониторинга (камер)
+                            div.form-field__item
+                                +counter('counter3', 'counter3-input', 'counter3-plus', 'counter3-minus')
+                        div.form-field
+                            p Серверное оборудование
                             div.form-field__item
                                 div.input
-                                    +radio('Да', 'own', 'radio22', 'true')
+                                    +radio('Уже имеем', 'one', 'radio1')
                                 div.input
-                                    +radio('Нет', 'own', 'radio23')
+                                    +radio('Будем приобретать', 'one', 'radio2')
+                                div.input
+                                    +radio('Будем работать «в облаке»', 'one', 'radio3')
                         div.form-field
-                            p Количество точек мониторинга (видеокамер):
+                            p Сколько месяцев в году будет использоваться система
                             div.form-field__item
-                                +counter('counter1', 'counter1-input', 'counter1-plus', 'counter1-minus')
+                                +counter('counter4', 'counter4-input', 'counter4-plus', 'counter4-minus')
                         div.form-field
-                            p Количество месяцев использования:
+                            p Количество вновь приобретаемых автоматизированных рабочих мест для системы
                             div.form-field__item
-                                +counter('counter2', 'counter2-input', 'counter2-plus', 'counter2-minus')
-                    p.item-text.item-text--def Стоимость неисключительной лицензии на использование программного обеспечения «Лесохранитель» на #[span#count2 1] #[span#title2 камеру] #[span#count3 1] #[span#title3 месяц] составит:
-                    div.count
-                        div.count-wrapper
-                            p.item-text.item-text--calc #[span#count1 8.900] рублей
-                div.description-item__block.description-item__block--sub
-                    p.item-text Использование программного Модуля автоматического распознавания лесных пожаров «Пожарный сторож», установленного на платформу видеокамер (только для оборудования AXIS), существенно ускорит процесс автоматического обнаружения, снизит нагрузку на сервер и позволит сэкономить на каналах связи.
-                    p.item-text.item-text--def Стоимость бессрочной лицензии «Пожарный сторож» - 35 000 рублей на каждую камеру.
-                    div.count
-                        div.count-wrapper
-                            p.item-text.item-text--calc #[span 35.000] рублей
-            div.description-item
-                div.description-item__block.description-item__block--substrate
-                    p Создание системы видеомониторинга на базе программного обеспечения «Лесохранитель» включает в себя выбор оптимального расположения точек мониторинга, проектирование, поставку и монтаж оборудования, установку и настройку программного обеспечения, обеспечение функционирования каналов связи и интеграцию всех составляющих в единую эффективную систему, оберегающую лес от пожаров.
-                div.description-item__block.description-item__block--substrate
-                    p По вопросам приобретения сезонных или постоянных лицензий на программное обеспечение «Лесохранитель», а также для расчета полной стоимости комплекса услуг по созданию и обслуживанию системы видеомониторинга и обратитесь к нам напрямую #[a(href="contact.html") наши контакты] или к нашим партнёрам #[a(href="partner.html") наши партнёры]
-            div.description-item
-                div#btn-form.description-item__btn запросить предварительный расчёт
-        section#form.feedback
-            div.feedback-header
-                p Пожалуйста, ответьте на вопросы.
-                p Если затрудняетесь ответить, просто заполните контактные данные и мы с Вами свяжемся.
-            div.feedback-wrapper
-                form(method='post').form
-                    div.form-field
-                        p Предпологаемое количество точек мониторинга (камер)
-                        div.form-field__item
-                            +counter('counter3', 'counter3-input', 'counter3-plus', 'counter3-minus')
-                    div.form-field
-                        p Серверное оборудование
-                        div.form-field__item
-                            div.input
-                                +radio('Уже имеем', 'one', 'radio1')
-                            div.input
-                                +radio('Будем приобретать', 'one', 'radio2')
-                            div.input
-                                +radio('Будем работать «в облаке»', 'one', 'radio3')
-                    div.form-field
-                        p Сколько месяцев в году будет использоваться система
-                        div.form-field__item
-                            +counter('counter4', 'counter4-input', 'counter4-plus', 'counter4-minus')
-                    div.form-field
-                        p Количество вновь приобретаемых автоматизированных рабочих мест для системы
-                        div.form-field__item
-                            +counter('counter5', 'counter5-input', 'counter5-plus', 'counter5-minus')
-                    div.form-field
-                        p Собираетесь ли Вы использовать инструмент «Видеостена»
-                        div.form-field__item
-                            div.input
-                                +radio('Хотим подключить к системе имеющуюся модель: XX', 'two', 'radio4')
-                            div.input
-                                +radio('Хотим приобрести', 'two', 'radio5')
-                            div.input
-                                +radio('Решим позже', 'two', 'radio6')
-                    div.form-field
-                        p Собираетесь ли Вы использовать комплексы мониторинга на базе беспилотных летательных аппаратов
-                        div.form-field__item
-                            div.input
-                                +radio('Хотим подключить к системе имеющиеся ХХ штук', 'three', 'radio7')
-                            div.input
-                                +radio('Хотим приобрести ХХ штук', 'three', 'radio8')
-                            div.input
-                                +radio('Решим позже', 'three', 'radio9')
-                    div.form-field
-                        p Собираетесь ли Вы использовать комплексы мониторинга на базе «фотоловушек»
-                        div.form-field__item
-                            div.input
-                                +radio('Хотим подключить к системе имеющуюся модель: ХХ', 'four', 'radio10')
-                            div.input
-                                +radio('Хотим приобрести', 'four', 'radio11')
-                            div.input
-                                +radio('Решим позже', 'four', 'radio12')
-                    div.form-field
-                        p Нужно ли Вам управление силами и средствами - отображение реальных позиций техники, людей, беспилотников с выдачей заданий и контролем?
-                        div.form-field__item
-                            div.input
-                                +radio('Хотим подключить к системе имеющиеся ХХ датчиков ГЛОНАСС техники и ХХ телефонов сотрудников', 'five', 'radio13')
-                            div.input
-                                +radio('Хотим приобрести ХХ датчиков ГЛОНАСС для техники и ХХ телефонов для сотрудников', 'five', 'radio14')                            
-                            div.input
-                                +radio('Решим позже', 'five', 'radio15')
-                    div.form-field
-                        p Нужно ли Вам мобильное приложение для авиапатрулирования?
-                        div.form-field__item
-                            div.input
-                                +radio('Хотим подключить к системе имеющиеся ХХ планшеты/смартфоны летчиков', 'six', 'radio16')
-                            div.input
-                                +radio('Хотим приобрести ХХ планшетов/смартфонов для летчиков с мобильным приложением', 'six', 'radio17')
-                            div.input
-                                +radio('Решим позже', 'six', 'radio18')
-                    div.form-field
-                        p Схема использования системы
-                        div.form-field__item
-                            div.input
-                                +radio('Приобретение в собственность с последующим ежегодным', 'seven', 'radio19') 
-                            div.input
-                                +radio('Пользование системой как сервисом (ежегодная услуга)', 'seven', 'radio20') 
-                            div.input
-                                +radio('Пользование системой как сервисом с последующим выкупом', 'seven', 'radio21')
-                    div.form-submit
-                        div.form-submit__item.form-submit__item--select
-                            input(id="select-input", type="text", placeholder="Ваш регион" readonly)
-                            img(src='img/arrow-black.svg', alt="", id="select-image")
-                            div#select-menu-wrapper.select-menu-wrapper
-                                ul.select-menu
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Воронежская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                                    li.select-menu__item Псковская область
-                        div.form-submit__item
-                            +input('Ваше имя', 'person-black', 'input-firstname')
-                        div.form-submit__item
-                            +input('Ваша почта', 'mail-black', 'input-mail')
-                        div.form-submit__item
-                            +input('Ваш телефон', 'phone-black', 'input-phone')
-                        div.form-submit__item
-                            a.btn(href="") Отправить
+                                +counter('counter5', 'counter5-input', 'counter5-plus', 'counter5-minus')
+                        div.form-field
+                            p Собираетесь ли Вы использовать инструмент «Видеостена»
+                            div.form-field__item
+                                div.input
+                                    +radio('Хотим подключить к системе имеющуюся модель: XX', 'two', 'radio4')
+                                div.input
+                                    +radio('Хотим приобрести', 'two', 'radio5')
+                                div.input
+                                    +radio('Решим позже', 'two', 'radio6')
+                        div.form-field
+                            p Собираетесь ли Вы использовать комплексы мониторинга на базе беспилотных летательных аппаратов
+                            div.form-field__item
+                                div.input
+                                    +radio('Хотим подключить к системе имеющиеся ХХ штук', 'three', 'radio7')
+                                div.input
+                                    +radio('Хотим приобрести ХХ штук', 'three', 'radio8')
+                                div.input
+                                    +radio('Решим позже', 'three', 'radio9')
+                        div.form-field
+                            p Собираетесь ли Вы использовать комплексы мониторинга на базе «фотоловушек»
+                            div.form-field__item
+                                div.input
+                                    +radio('Хотим подключить к системе имеющуюся модель: ХХ', 'four', 'radio10')
+                                div.input
+                                    +radio('Хотим приобрести', 'four', 'radio11')
+                                div.input
+                                    +radio('Решим позже', 'four', 'radio12')
+                        div.form-field
+                            p Нужно ли Вам управление силами и средствами - отображение реальных позиций техники, людей, беспилотников с выдачей заданий и контролем?
+                            div.form-field__item
+                                div.input
+                                    +radio('Хотим подключить к системе имеющиеся ХХ датчиков ГЛОНАСС техники и ХХ телефонов сотрудников', 'five', 'radio13')
+                                div.input
+                                    +radio('Хотим приобрести ХХ датчиков ГЛОНАСС для техники и ХХ телефонов для сотрудников', 'five', 'radio14')                            
+                                div.input
+                                    +radio('Решим позже', 'five', 'radio15')
+                        div.form-field
+                            p Нужно ли Вам мобильное приложение для авиапатрулирования?
+                            div.form-field__item
+                                div.input
+                                    +radio('Хотим подключить к системе имеющиеся ХХ планшеты/смартфоны летчиков', 'six', 'radio16')
+                                div.input
+                                    +radio('Хотим приобрести ХХ планшетов/смартфонов для летчиков с мобильным приложением', 'six', 'radio17')
+                                div.input
+                                    +radio('Решим позже', 'six', 'radio18')
+                        div.form-field
+                            p Схема использования системы
+                            div.form-field__item
+                                div.input
+                                    +radio('Приобретение в собственность с последующим ежегодным', 'seven', 'radio19') 
+                                div.input
+                                    +radio('Пользование системой как сервисом (ежегодная услуга)', 'seven', 'radio20') 
+                                div.input
+                                    +radio('Пользование системой как сервисом с последующим выкупом', 'seven', 'radio21')
+                        div.form-submit
+                            div.form-submit__item.form-submit__item--select
+                                input(id="select-input", type="text", placeholder="Ваш регион" readonly)
+                                img(src='img/arrow-black.svg', alt="", id="select-image")
+                                div#select-menu-wrapper.select-menu-wrapper
+                                    ul.select-menu
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Воронежская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                                        li.select-menu__item Псковская область
+                            div.form-submit__item
+                                +input('Ваше имя', 'person-black', 'input-firstname')
+                            div.form-submit__item
+                                +input('Ваша почта', 'mail-black', 'input-mail')
+                            div.form-submit__item
+                                +input('Ваш телефон', 'phone-black', 'input-phone')
+                            div.form-submit__item
+                                a.btn(href="") Отправить

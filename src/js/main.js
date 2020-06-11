@@ -321,6 +321,71 @@ $(document).ready(function () {
 
         new SimpleBar(select);
     }
+
+    //modal
+    let overlay = document.getElementById('overlay')
+    let close = document.getElementById('close')
+    let modal = document.getElementById('modal')
+
+    close.addEventListener('click', () => {
+        modal.classList.remove('show')
+        overlay.classList.remove('show')
+        modal.classList.add('hide')
+        overlay.classList.add('hide')
+    })
+
+    const select = document.getElementById('modal-select-menu-wrapper')
+    const selectInput = document.getElementById('modal-select-input')
+    const selectImage = document.getElementById('modal-select-image')
+    let selectItems = document.getElementsByClassName('select-menu__item')
+
+    new SimpleBar(select);
+
+    selectInput.addEventListener('click', () => {
+        selectInput.classList.toggle('active')
+        select.classList.toggle('active')
+    })
+
+    selectImage.addEventListener('click', () => {
+        selectInput.classList.toggle('active')
+        select.classList.toggle('active')
+    })
+    
+    selectItems = Array.from(selectItems)
+
+    selectItems.map((item) => {
+        item.addEventListener('click', () => {
+            selectInput.classList.toggle('active')
+            select.classList.toggle('active')
+            selectInput.value = item.innerText 
+        })
+    })
+
+    if ($('#btn-form').length) {
+        let btnForm = document.getElementById('btn-form')
+
+        btnForm.addEventListener('click', () => {
+            overlay.classList.remove('hide')
+            modal.classList.remove('hide')
+            overlay.classList.add('show')
+            modal.classList.add('show')
+        })
+    }
+
+    if ($('.btn-phone').length) {
+        let btn = document.getElementsByClassName('btn-phone')
+        
+        btn = Array.from(btn)
+
+        btn.map(item => {
+            item.addEventListener('click', () => {
+                overlay.classList.remove('hide')
+                modal.classList.remove('hide')
+                overlay.classList.add('show')
+                modal.classList.add('show')
+            })
+        })
+    }
     
 });
 
