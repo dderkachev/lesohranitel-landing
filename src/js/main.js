@@ -27,70 +27,40 @@ $(document).ready(function () {
     if($('.slider-views').length) {
         let sliderView = tns({
             container: '.slider-views',
-            items: 1,
+            items: 4,
             loop: false,
             nav: false,
             mouseDrag: true,
             arrowKeys: true,
-            controlsText: ['',''],
-            responsive: {
-                640: {
-                    edgePadding: 20,
-                    gutter: 20,
-                    items: 2
-                },
-                700: {
-                    gutter: 30
-                },
-                900: {
-                    items: 4
-                }
-            }
+            edgePadding: 20,
+            gutter: 30,
+            controlsText: ['','']
         });
     }
 
     if($('.slider-observer').length) {
         let sliderObserver = tns({
             container: '.slider-observer',
-            items: 1,
+            items: 4,
             loop: false,
             nav: false,
             mouseDrag: true,
             arrowKeys: true,
-            controlsText: ['',''],
-            responsive: {
-                640: {
-                    edgePadding: 20,
-                    gutter: 20,
-                    items: 2
-                },
-                700: {
-                    gutter: 30
-                },
-                900: {
-                    items: 4
-                }
-            }
+            edgePadding: 20,
+            gutter: 30,
+            controlsText: ['','']
         });
     }
 
     if($('.slider-info').length) {
         let sliderInfo = tns({
             container: '.slider-info',
-            items: 1,
+            items: 6,
             loop: false,
             nav: false,
             mouseDrag: true,
             arrowKeys: true,
-            controlsText: ['',''],
-            responsive: {
-                640: {
-                    items: 2
-                },
-                900: {
-                    items: 6
-                }
-            }
+            controlsText: ['','']
         });
     }
 
