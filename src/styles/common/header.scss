@@ -7,31 +7,36 @@
 @import "../mixins/slider";
 
 header {
-  @include wrapper();
   position: relative;
   width: 100%;
   flex: 0 0 auto;
 }
 
 .header {
-  .logo {
-    display: none;
-  }
+  position: relative;
   &::after {
     position: absolute;
     content: '';
-    background: url('../img/header-bg.png') top center no-repeat;
-    background-size: 100%;
-    width: 1440px;
-    height: 1527px;
-    top: 0;
-    left: -80px;
-    right: -80px;
-    z-index: -1;
+    top: 15px;
+    left: 0;
+    width: 270px;
+    height: 200px;
+    background: url('../img/camera-lg.png') center no-repeat;
+    background-size: contain;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .wrapper {
+    @include wrapper();
+    max-width: $wrapperSize;
   }
 }
 
 .header--logo {
+  @include wrapper();
   &::after {
     display: none;
   }
@@ -54,24 +59,19 @@ header {
 .header-top {
   position: relative;
   margin-bottom: 40px;
-  &::after {
-    position: absolute;
-    content: '';
-    top: 15px;
-    left: -80px;
-    width: 270px;
-    height: 200px;
-    background: url('../img/camera-lg.png') center no-repeat;
-    background-size: contain;
-  }
 
   h1 {
-    margin-left: 230px;
     max-width: 600px;
     color: #ffffff;
     font-family: $fontFamilySub;
     font-size: 46px;
     font-weight: 600;
+
+    @media screen {
+      @media (max-width: 1600px) {
+        margin-left: 230px;
+      }
+    }
   }
 }
 
@@ -108,15 +108,14 @@ header {
 }
 
 .header-bottom__info {
-  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 45px;
   &::after {
     position: absolute;
     content: '';
-    right: -80px;
-    bottom: 20px;
+    right: 0px;
+    bottom: 153px;
     width: 250px;
     height: 100px;
     background: url('../img/quadcopter.png') center no-repeat;
@@ -295,7 +294,7 @@ header {
 
 .header-logo {
   position: absolute;
-  right: -80px;
+  right: 0;
   top: calc(50% - 315px);
   z-index: 1;
 }
@@ -364,4 +363,13 @@ nav {
       }
     }
   }
+}
+
+.earth {
+  position: absolute;
+  width: 950px;
+  height: 943px;
+  right: 220px;
+  top: -80px;
+  transform: scale(0.8);
 }

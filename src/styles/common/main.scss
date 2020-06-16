@@ -40,18 +40,6 @@
         padding: 0 35px;
         &-bg {
             position: relative;
-            &::after {
-                position: absolute;
-                content: '';
-                background: url('../img/slider-bg.png') left center no-repeat;
-                background-size: 100%;
-                width: 1440px;
-                height: 900px;
-                top: -145px;
-                left: -80px;
-                right: -80px;
-                z-index: -1;
-            }
         }
     }
 
@@ -60,48 +48,14 @@
         display: flex;
         margin-top: 0;
         text-align: unset;
-        &::after {
-            position: absolute;
-            content: '';
-            left: -80px;
-            top: 0;
-            width: 851px;
-            height: 900px;
-            background: url('../img/map.png') no-repeat;
-            background-size: contain;
-            z-index: -1;
-        }
     }
 
     &--items {
         position: relative;
-        &::after {
-            position: absolute;
-            content: '';
-            left: -80px;
-            right: -80px;
-            top: -40px;
-            width: 1440px;
-            height: 1500px;
-            background: url('../img/item-bg.png') no-repeat;
-            background-size: cover;
-            z-index: -1;
-        }
     }
 
     &--video {
         position: relative;
-        &::after {
-            position: absolute;
-            content: '';
-            left: -80px;
-            top: 0;
-            width: 851px;
-            height: 900px;
-            background: url('../img/map.png') no-repeat;
-            background-size: contain;
-            z-index: -1;
-        }
     }
 
     &--tab-content {
@@ -1458,13 +1412,29 @@
 }
 
 .main--index {
-//     position: relative;
-    max-width: 1280px;
-//     .wrapper {
-//         @include wrapper();
-//         position: relative;
-//         max-width: $wrapperSize;
-//     }
+    position: relative;
+    .wrapper {
+        @include wrapper();
+        position: relative;
+        max-width: $wrapperSize;
+    }
+}
+
+.wrapper--index {
+    @include wrapper();
+    max-width: 1920px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        background: url('../img/main-bg.jpg') top center no-repeat;
+        background-size: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+    }
 }
 
 .main--partner {

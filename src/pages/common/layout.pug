@@ -11,12 +11,12 @@ html(lang="ru")
             link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css")
             link(rel="stylesheet" href="css/style.min.css")
     body
-        block header
-            include header
-        block content
-        div.wrapper.wrapper--footer
+        div.wrapper.wrapper--index
+            block header
+                include header
+            block content
             block footer
                 include footer
-        block scripts
-            script(src='js/main.min.js')
-            script(src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js")
+            block scripts
+                script(src='js/main.min.js')
+                script(src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js")
