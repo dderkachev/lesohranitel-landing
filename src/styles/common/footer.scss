@@ -13,6 +13,10 @@ footer {
         align-items: center;
         flex: 0 0 auto;
         padding: 20px 0;
+
+        & > .logo a {
+            display: block;
+        }
     }
 
     &::after {
@@ -27,14 +31,6 @@ footer {
         z-index: -1;
     }
 
-    .logo {
-        width: 101px;
-        height: 110px;
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
     nav {
         flex-grow: 1;
         padding-right: 0;
@@ -48,5 +44,5 @@ footer {
                 }
             }
         }
-    }
+    }  
 }

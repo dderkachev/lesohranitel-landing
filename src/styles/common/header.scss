@@ -37,8 +37,17 @@ header {
   }
 
   .logo {
+    position: relative;
     display: block;
     margin-right: auto;
+
+    a {
+      position: absolute;
+      top: -22px;
+      left: 0;
+      display: block;
+      width: 80px;
+    }
   }
 }
 
