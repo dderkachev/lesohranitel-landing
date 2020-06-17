@@ -53,15 +53,14 @@ $(document).ready(function () {
     }
 
     if($('.slider-info').length) {
-        let sliderInfo = tns({
-            container: '.slider-info',
-            items: 6,
-            loop: false,
-            nav: false,
-            mouseDrag: true,
-            arrowKeys: true,
-            controlsText: ['','']
-        });
+        new Swiper('.slider-info-wrapper', {
+            slidesPerView: 6,
+            loop: true,
+            navigation: {
+                nextEl: '.slider-next',
+                prevEl: '.slider-prev'
+            }
+        })
     }
 
     if($('.tab-panel').length) {

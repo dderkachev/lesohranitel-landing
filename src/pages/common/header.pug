@@ -1,5 +1,13 @@
+mixin region(id, path, count, title, subtitle)
+  - var subtitle = subtitle;
+  div.slider-info__slide.swiper-slide(id=id)
+    div.slider-info__slide-img
+      img(src=path alt="")
+    div.slider-info__slide-text
+      span= count 
+      p #[span= title] #{subtitle}
+
 header.header
-  //- include ../includes/map
   div.earth
     img(src="img/earth.png", alt="")
   div.header-logo
@@ -23,45 +31,48 @@ header.header
         div.info-block.info-block--document
           p Свидетельство о рег. ПЭВМ №2016661202 от 03.10.2016 номер в реестре российского ПО 3384 Приказ МинКомСвязи РФ №212 от 28.04.2017
       div.slider-info
-        div.slider-info__slide#LEN
-          div.slider-info__slide-img
-            img(src="img/info1.png" alt="")
-          div.slider-info__slide-text
-            span 116
-            p <span>Ленинградская</span> область
-        div.slider-info__slide#PSK
-          div.slider-info__slide-img
-            img(src="img/info2.png" alt="")
-          div.slider-info__slide-text
-            span 93
-            p <span>Псковская</span> область
-        div.slider-info__slide#MSK
-          div.slider-info__slide-img
-            img(src="img/info3.png" alt="")
-          div.slider-info__slide-text
-            span 89
-            p <span>Московская</span> область
-        div.slider-info__slide#SVE
-          div.slider-info__slide-img
-            img(src="img/info4.png" alt="")
-          div.slider-info__slide-text
-            span 84
-            p <span>Свердловская</span> область
-        div.slider-info__slide#NIJ
-          div.slider-info__slide-img
-            img(src="img/info5.png" alt="")
-          div.slider-info__slide-text
-            span 60
-            p <span>Нижегородская</span> область
-        div.slider-info__slide#VOR
-          div.slider-info__slide-img
-            img(src="img/info6.png" alt="")
-          div.slider-info__slide-text
-            span 55
-            p <span>Воронежская</span> область
-        div.slider-info__slide
-          div.slider-info__slide-img
-            img(src="img/info6.png" alt="")
-          div.slider-info__slide-text
-            span 116
-            p <span>Ленинградская</span> область
+        div.slider-prev
+        div.slider-info-wrapper.swiper-container
+          div.swiper-wrapper
+            +region('LEN', 'img/info1.png', 116, 'Ленинградская', 'область')
+            +region('MSK', 'img/info3.png', 99, 'Московская', 'область')
+            +region('NIJ', 'img/info5.png', 97, 'Нижегородская', 'область')
+            +region('PSK', 'img/info2.png', 93, 'Псковская', 'область')
+            +region('SVE', 'img/info4.png', 84, 'Свердловская', 'область')
+            +region('YMN', 'img/info7.svg', 58, 'Ямало-Ненецкий', 'автономный округ')
+            +region('VOR', 'img/info6.png', 52, 'Воронежская', 'область')
+            +region('TVR', 'img/info41.svg', 50, 'Тверская', 'область')
+            +region('BRY', 'img/info8.png', 45, 'Брянская', 'область') 
+            +region('ROS', 'img/info9.jpg', 42, 'Ростовская', 'область')   
+            +region('NOV', 'img/info10.png', 36, 'Новгородская', 'область')
+            +region('VLD', 'img/info11.png', 30, 'Владимирская', 'область')
+            +region('KRK', 'img/info12.png', 30, 'Красноярский', 'край')
+            +region('BLG', 'img/info13.jpg', 27, 'Белгородская', 'область')
+            +region('RK', 'img/info14.png', 27, 'Коми', 'Республика')
+            +region('RS', 'img/info15.jpg', 26, 'Якутия', 'Республика Саха')
+            +region('PK', 'img/info16.jpg', 25, 'Пермский', 'край')
+            +region('KLJ', 'img/info17.png', 22, 'Калужская', 'область')
+            +region('RB', 'img/info18.jpg', 20, 'Бурятия', 'Республика')
+            +region('RME', 'img/info19.jpg', 18, 'Марий Эл', 'Республика')
+            +region('ARH', 'img/info20.png', 17, 'Архангельская', 'область')
+            +region('VOL', 'img/info36.svg', 16, 'Волгоградская', 'область')
+            +region('SML', 'img/info21.png', 15, 'Смоленская', 'область')
+            +region('HBR', 'img/info33.png', 15, 'Хабаровский', 'край')
+            +region('LIP', 'img/info34.svg', 14, 'Липецкая', 'область')
+            +region('KOS', 'img/info37.svg', 12, 'Костромская', 'область')
+            +region('SAR', 'img/info38.svg', 12, 'Саратовская', 'область')
+            +region('SPB', 'img/info22.png', 10, 'Санкт-Петербург', 'город')
+            +region('IVN', 'img/info23.png', 9, 'Ивановская', 'область')
+            +region('KSK', 'img/info24.png', 6, 'Краснодарский', 'край')
+            +region('ZBK', 'img/info25.gif', 6, 'Забайкальский', 'край')
+            +region('KYR', 'img/info26.png', 5, 'Курганская', 'область')
+            +region('KYS', 'img/info27.png', 5, 'Курская', 'область')
+            +region('RCH', 'img/info28.png', 5, 'Чувашия', 'Республика')
+            +region('AMR', 'img/info39.png', 4, 'Амурская', 'область')
+            +region('SAH', 'img/info29.png', 4, 'Сахалинская', 'область')
+            +region('YAR', 'img/info30.svg', 4, 'Ярославская', 'область')
+            +region('RKA', 'img/info31.svg', 4, 'Карелия', 'Республика')
+            +region('HMO', 'img/info32.svg', 3, 'Ханты-Мансийский', 'автономный округ')
+            +region('RA', 'img/info33.svg', 2, 'Алтай', 'Республика')
+            +region('KEO', 'img/info35.svg', 2, 'Кемеровская', 'область')
+        div.slider-next
