@@ -8,8 +8,7 @@ mixin region(id, path, count, title, subtitle)
       p #[span= title] #{subtitle}
 
 header.header
-  div.earth
-    img(src="img/earth.png", alt="")
+  include ../includes/earth
   div.header-logo
     img(src="img/logos.png" alt='')
   div.wrapper
