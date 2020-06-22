@@ -1,15 +1,16 @@
 .earth {
     svg {
         position: absolute;
-        top: 80px;
-        right: 5px;
-        transform: scale(0.8);
+        top: -9px;
+        right: -218px;
+        transform: scale(1.01);
         
         .region {
             stroke: rgb(10, 255, 0);
+            stroke-width: 2px;
             fill: transparent;
             &.include {
-                fill: rgba(10, 255, 0, 0.6);
+                fill: rgba(10, 255, 0, 0.3);
                 &.active {
                     fill: rgba(230, 98, 0, 1);
                     stroke: rgb(255, 148, 59);
