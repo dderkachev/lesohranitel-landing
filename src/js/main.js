@@ -56,6 +56,7 @@ $(document).ready(function () {
         new Swiper('.slider-info-wrapper', {
             slidesPerView: 6,
             loop: true,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.slider-next',
                 prevEl: '.slider-prev'

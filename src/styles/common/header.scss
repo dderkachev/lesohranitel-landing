@@ -398,6 +398,10 @@ nav {
           background-size: contain;
         }
       }
+      
+      &--system {
+        @include btn--unactive()
+      }
     }
   }
 }

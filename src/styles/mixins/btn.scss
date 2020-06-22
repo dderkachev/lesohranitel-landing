@@ -53,3 +53,10 @@
         height: 20px;
     }
 }
+
+@mixin btn--unactive {
+    background: #a4a4a4;
+    box-shadow: 0px 25px 50px 0 rgba(112, 112, 112, 0.4), inset 0px -3px 0 0 #818181;
+    pointer-events: none;
+    cursor: default;
+}
