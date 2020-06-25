@@ -1948,6 +1948,12 @@
                 min-height: 100%;
             }
         }
+        &-article {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         .count {
             text-align: center;
             &-wrapper {
