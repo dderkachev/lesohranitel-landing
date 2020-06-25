@@ -17,12 +17,13 @@ header {
   &::after {
     position: absolute;
     content: '';
-    top: 15px;
-    left: 0;
+    top: -80px;
+    left: 260px;
     width: 270px;
     height: 200px;
     background: url('../img/camera-lg.png') center no-repeat;
     background-size: contain;
+    transform: scale(0.8);
   }
 
   .logo {
@@ -113,11 +114,11 @@ header {
   &::after {
     position: absolute;
     content: '';
-    right: 0px;
+    right: 270px;
     bottom: 153px;
     width: 250px;
     height: 100px;
-    background: url('../img/quadcopter.png') center no-repeat;
+    background: url('../img/quadro.png') center no-repeat;
     background-size: contain;
   }
 
@@ -185,7 +186,8 @@ header {
     align-self: flex-end;
     max-width: 436px;
     padding: 15px 30px;
-    margin: 0 auto;
+    margin: 0 50px;
+    margin-right: 0;
     border-radius: 5px;
     z-index: 1;
 
@@ -331,9 +333,21 @@ header {
 
 .header-logo {
   position: absolute;
-  right: 0;
-  top: calc(50% - 315px);
-  z-index: 1;
+  right: 175px;
+  top: calc(50% - 355px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+
+  img {
+    position: relative;
+    z-index: 0;
+    &:last-child {
+      margin-top: -170px;
+      z-index: -1;
+    }
+  }
 }
 
 nav {
