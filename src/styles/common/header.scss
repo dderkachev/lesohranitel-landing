@@ -17,13 +17,12 @@ header {
   &::after {
     position: absolute;
     content: '';
-    top: -80px;
-    left: 260px;
-    width: 270px;
+    top: -10px;
+    left: 225px;
+    width: 385px;
     height: 200px;
     background: url('../img/camera-lg.png') center no-repeat;
     background-size: contain;
-    transform: scale(0.8);
   }
 
   .logo {
@@ -63,6 +62,7 @@ header {
 
   h1 {
     max-width: 600px;
+    margin-left: 250px;
     color: #ffffff;
     font-family: $fontFamilySub;
     font-size: 46px;
@@ -81,10 +81,13 @@ header {
   margin-bottom: 35px;
   h2 {
     @include substrate();
+    position: relative;
     margin-bottom: 20px;
     font-family: $fontFamilySub;
     font-size: 57px;
     font-weight: 800;
+    text-transform: uppercase;
+    z-index: 1;
   }
 }
 
