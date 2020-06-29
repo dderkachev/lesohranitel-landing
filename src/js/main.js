@@ -3,6 +3,19 @@ import { tns } from '../../node_modules/tiny-slider/src/tiny-slider'
 
 $(document).ready(function () {
 
+    if($('.slider-info').length) {
+        new Swiper('.slider-info-wrapper', {
+            slidesPerView: 6,
+            loop: true,
+            allowTouchMove: false,
+            preventClicksPropagation: false,
+            navigation: {
+                nextEl: '.slider-next',
+                prevEl: '.slider-prev'
+            }
+        })
+    }
+
     if($('.region').length) {
         let regions = document.getElementsByClassName(`region`)
         let sliderItemsRegion = document.getElementsByClassName(`slider-info__slide`)
@@ -50,18 +63,6 @@ $(document).ready(function () {
             gutter: 30,
             controlsText: ['','']
         });
-    }
-
-    if($('.slider-info').length) {
-        new Swiper('.slider-info-wrapper', {
-            slidesPerView: 6,
-            loop: true,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: '.slider-next',
-                prevEl: '.slider-prev'
-            }
-        })
     }
 
     if($('.tab-panel').length) {
