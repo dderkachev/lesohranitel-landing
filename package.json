@@ -64,6 +64,7 @@
     "jquery": "^3.5.0",
     "normalize.css": "^8.0.1",
     "simplebar": "^5.1.0",
+    "swiper": "^6.0.0",
     "tiny-slider": "^2.9.2"
   },
   "editorconfig-cli": [

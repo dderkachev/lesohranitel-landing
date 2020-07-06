@@ -1,5 +1,7 @@
 import $ from '../local_modules/jquery/dist/jquery.min'
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider'
+import Swiper from '../local_modules/swiper/swiper-bundle.min'
+import SimpleBar from '../local_modules/simplebar/dist/simplebar.min'
 
 $(document).ready(function () {
 
