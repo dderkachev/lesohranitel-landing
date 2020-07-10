@@ -2,7 +2,7 @@ mixin region(id, path, count, title, subtitle)
   - var subtitle = subtitle;
   div.slider-info__slide.swiper-slide(id=id)
     div.slider-info__slide-img
-      img(src=path alt="")
+      img.lazy(data-src=path alt="")
     div.slider-info__slide-text
       span= count 
       p #[span= title] #{subtitle}
@@ -10,8 +10,8 @@ mixin region(id, path, count, title, subtitle)
 header.header
   include ../includes/earth
   div.header-logo
-    img(src="img/formoza-main.png" alt='')
-    img(src="img/lesohranitel-main.png", alt="")
+    img.lazy(data-src="img/formoza-main.png" alt='')
+    img.lazy(data-src="img/lesohranitel-main.png", alt="")
   div.wrapper
     div.header-top
       include ../includes/nav
@@ -22,10 +22,10 @@ header.header
         p крупнейшая в мире по количеству точек мониторинга с автоматическим определением лесных пожаров.
       div.header-bottom__info
         div.info-block.info-block--bg
-          img(src="img/planet.png" alt='')
+          img.lazy(data-src="img/planet.png" alt='')
           p Больше <span>40</span> регионов
         div.info-block.info-block--bg.info-block--bg-corner.info-block--mr
-          img(src="img/camera.png" alt='')
+          img.lazy(data-src="img/camera.png" alt='')
           p Больше <span>1.100</span> камер
         a.btn(href="files/present.pdf") Скачать презентацию
         div.info-block.info-block--document

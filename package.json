@@ -65,7 +65,8 @@
     "normalize.css": "^8.0.1",
     "simplebar": "^5.1.0",
     "swiper": "^6.0.0",
-    "tiny-slider": "^2.9.2"
+    "tiny-slider": "^2.9.2",
+    "yall-js": "^3.2.0"
   },
   "editorconfig-cli": [
     "*.json",

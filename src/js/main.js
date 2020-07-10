@@ -2,6 +2,9 @@ import $ from '../local_modules/jquery/dist/jquery.min'
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider'
 import Swiper from '../local_modules/swiper/swiper-bundle.min'
 import SimpleBar from '../local_modules/simplebar/dist/simplebar.min'
+import yall from '../local_modules/yall-js/dist/yall.min'
+
+document.addEventListener("DOMContentLoaded", yall);
 
 $(document).ready(function () {
 
