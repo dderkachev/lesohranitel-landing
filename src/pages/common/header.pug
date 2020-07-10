@@ -2,7 +2,7 @@ mixin region(id, path, count, title, subtitle)
   - var subtitle = subtitle;
   div.slider-info__slide.swiper-slide(id=id)
     div.slider-info__slide-img
-      img.lazy(data-src=path alt="")
+      img(src=path alt="")
     div.slider-info__slide-text
       span= count 
       p #[span= title] #{subtitle}

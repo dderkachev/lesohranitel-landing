@@ -12,6 +12,7 @@ $(document).ready(function () {
         new Swiper('.slider-info-wrapper', {
             slidesPerView: 6,
             loop: true,
+            lazy: true,
             allowTouchMove: false,
             preventClicksPropagation: false,
             navigation: {
