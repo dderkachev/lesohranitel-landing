@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.0",
+    "lightbox2": "^2.11.3",
     "normalize.css": "^8.0.1",
     "simplebar": "^5.1.0",
     "swiper": "^6.0.0",
