@@ -2,6 +2,7 @@
 @import "../../local_modules/tiny-slider/dist/tiny-slider";
 @import "../../local_modules/simplebar/dist/simplebar.min";
 @import "../../local_modules/swiper/swiper-bundle.min";
+@import "../../local_modules/lightbox2/dist/css/lightbox.min";
 @import "../utils/fonts";
 
 *,
@@ -61,4 +62,32 @@ h6 {
 .simplebar-scrollbar::before {
   background-color: #00a100;
   opacity: 1 !important;
+}
+
+.lightbox .lb-image {
+  border: 0;
+}
+
+.lb-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a.lb-prev,
+  a.lb-next {
+    float: none;
+    width: 50px;
+    height: 50px;
+    background: url('../img/slider-arrow-lg.svg') center no-repeat;
+    background-size: 100%;
+  }
+
+  a.lb-next {
+    margin-left: auto;
+  }
+
+  a.lb-prev {
+    margin-right: auto;
+    transform: rotate(180deg);
+  }
 }

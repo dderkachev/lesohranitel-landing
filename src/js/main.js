@@ -3,10 +3,16 @@ import { tns } from '../../node_modules/tiny-slider/src/tiny-slider'
 import Swiper from '../local_modules/swiper/swiper-bundle.min'
 import SimpleBar from '../local_modules/simplebar/dist/simplebar.min'
 import yall from '../local_modules/yall-js/dist/yall.min'
+import lightbox from '../local_modules/lightbox2/dist/js/lightbox.min'
 
 document.addEventListener("DOMContentLoaded", yall);
 
 $(document).ready(function () {
+
+    lightbox.option({
+        albumLabel: "%1/%2",
+        disableScrolling: true
+    })
 
     if($('.slider-info').length) {
         new Swiper('.slider-info-wrapper', {
