@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", yall);
 $(document).ready(function () {
 
     lightbox.option({
-        albumLabel: "%1/%2",
+        albumLabel: "%1 / %2",
         disableScrolling: true
     })
 

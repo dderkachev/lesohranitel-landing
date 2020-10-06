@@ -4,6 +4,7 @@
 @import "../../local_modules/swiper/swiper-bundle.min";
 @import "../../local_modules/lightbox2/dist/css/lightbox.min";
 @import "../utils/fonts";
+@import "../utils/variables";
 
 *,
 *::before,
@@ -70,16 +71,13 @@ h6 {
 
 .lb-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   a.lb-prev,
   a.lb-next {
-    float: none;
-    width: 50px;
-    height: 50px;
-    background: url('../img/slider-arrow-lg.svg') center no-repeat;
-    background-size: 100%;
+    width: 50%;
+    background: url('../img/slider-arrow-lg.svg') right 48% no-repeat;
+    background-size: 50px;
+    box-sizing: border-box;
   }
 
   a.lb-next {
@@ -87,7 +85,10 @@ h6 {
   }
 
   a.lb-prev {
-    margin-right: auto;
     transform: rotate(180deg);
   }
+}
+
+.lb-data .lb-number {
+  font-family: $fontFamilyDefault;
 }
