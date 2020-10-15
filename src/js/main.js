@@ -109,6 +109,9 @@ $(document).ready(function () {
                     case (17):
                         $('.section--tab-content').addClass('active');
                         break
+                    case (18):
+                        $('.section--tab-content').addClass('active');
+                        break
                     default:
                         $('.section--tab-content').removeClass('active');
                         break
