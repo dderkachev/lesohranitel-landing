@@ -318,7 +318,11 @@ block content
             div.item-row
               div.item-row__block.item-row__block--column.item-row__block--fg
                 div.image-block
-                  img(src="img/row14-img3.png", alt="")
+                  img(src="img/row14-img3.jpg", alt="")
+            div.item-row
+              div.item-row__block.item-row__block--column.item-row__block--fg
+                div.image-block
+                  img(src="img/row14-img4.jpg", alt="")
           div.tab-content__item.tab-content__item--fifteenth
             h2.item-header.item-header--tc Комплексная платформа
             div.item-row
@@ -638,7 +642,9 @@ block content
           div.content-row
             div.content-block.content-block--info.content-block--fw
               div.video-block
-                video(src="videos/row18-video1.mov", poster="img/row18-img6.png", controls)
+                video(poster="img/row18-img6.png", controls)
+                  source(src="videos/row18-video1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                  source(src="videos/row18-video1.webm" type='video/webm; codecs="vp8, vorbis"')
               div.info-block
                 span Пример
                 p работы видеопотока с модуля
