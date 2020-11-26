@@ -2839,3 +2839,17 @@
         max-width: 1440px;
     }
 }
+
+.information {
+    @include substrate-block();
+
+    p {
+        
+        text-align: left;
+        font-family: $fontFamilyDefault;
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
