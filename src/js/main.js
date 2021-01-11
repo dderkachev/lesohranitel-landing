@@ -78,52 +78,93 @@ $(document).ready(function () {
     }
 
     if($('.tab-panel').length) {
+
+        const removeTabActive = () => {
+            $('.tab-panel li').removeClass('active');
+            $('.tab-content div').removeClass('active');
+            $('.section--tab-content').removeClass('active');
+            $('.section--tab-content .content-container').removeClass('active');
+        }
+
+        const switchTabContent = (index) => {
+            switch (index + 1) {
+                case (4):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (5):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (7):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (8):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (10):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (14):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (17):
+                    $('.section--tab-content').addClass('active');
+                    break
+                case (18):
+                    $('.section--tab-content').addClass('active');
+                    break
+                default:
+                    $('.section--tab-content').removeClass('active');
+                    break
+            }
+        }
+
         $('.tab-panel li').on('click', function() {
             var index = $(this).index();
-    
+             
             if (!$(this).is('active')) {
-                $('.tab-panel li').removeClass('active');
-                $('.tab-content div').removeClass('active');
-                $('.section--tab-content').removeClass('active');
-                $('.section--tab-content .content-container').removeClass('active');
                 
-                switch (index + 1) {
-                    case (4):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (5):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (7):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (8):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (10):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (14):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (17):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    case (18):
-                        $('.section--tab-content').addClass('active');
-                        break
-                    default:
-                        $('.section--tab-content').removeClass('active');
-                        break
-                }
-    
+                removeTabActive()
+                console.log(index)
+                switchTabContent(index)
+
                 $(this).addClass('active');
                 $('.tab-content').find('.tab-content__item:eq(' + index + ')').addClass('active');
                 $(`#content-container-${index + 1}`).addClass('active');
             }
         });
-    
+        
         new SimpleBar(document.getElementById('tab-panel'));
+
+        //hash navigation
+        if(window.location.hash.length) {
+            const updateTab = () => {
+                let hash = window.location.hash
+                let regHash = hash.match(/\d{1,2}/)
+                let liIndex = parseInt(regHash) - 1
+                let liCount = $('.tab-panel').find('li').length
+
+                if (parseInt(regHash) == 0 || parseInt(regHash) > liCount) {
+                    liIndex = 0
+                    history.pushState('', document.title, window.location.pathname)
+                }
+
+                let formatHash = liIndex.toString()
+
+                removeTabActive()
+                console.log(liIndex, formatHash)
+                switchTabContent(liIndex)
+
+                $('.tab-panel').find(`li:eq('${formatHash}')`).addClass('active')
+                $('.tab-content').find(`.tab-content__item:eq('${formatHash}')`).addClass('active');
+                $(`#content-container-${parseInt(formatHash) + 1}`).addClass('active');
+                
+                $('html, body').animate({
+                    'scrollTop': $('.tab-panel').offset().top - 100
+                }, 900, 'swing')
+            }
+            window.addEventListener('load', updateTab)
+            window.addEventListener('hashchange', updateTab)
+        } 
     }
     
     if ($('.feedback').length) {
@@ -372,6 +413,5 @@ $(document).ready(function () {
             })
         })
     }
-    
 });
 
