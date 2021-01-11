@@ -124,7 +124,6 @@ $(document).ready(function () {
             if (!$(this).is('active')) {
                 
                 removeTabActive()
-                console.log(index)
                 switchTabContent(index)
 
                 $(this).addClass('active');
@@ -139,28 +138,29 @@ $(document).ready(function () {
         if(window.location.hash.length) {
             const updateTab = () => {
                 let hash = window.location.hash
-                let regHash = hash.match(/\d{1,2}/)
-                let liIndex = parseInt(regHash) - 1
-                let liCount = $('.tab-panel').find('li').length
-
-                if (parseInt(regHash) == 0 || parseInt(regHash) > liCount) {
-                    liIndex = 0
-                    history.pushState('', document.title, window.location.pathname)
+                let regHash = hash.match(/(subsystem_)(\d{1,2})/)
+                if (regHash) {
+                    let liIndex = regHash[2] - 1
+                    let liCount = $('.tab-panel').find('li').length
+    
+                    if (regHash[2] == 0 || regHash[2] > liCount) {
+                        liIndex = 0
+                        history.pushState('', document.title, window.location.pathname)
+                    }
+    
+                    let formatHash = liIndex.toString()
+    
+                    removeTabActive()
+                    switchTabContent(liIndex)
+    
+                    $('.tab-panel').find(`li:eq('${formatHash}')`).addClass('active')
+                    $('.tab-content').find(`.tab-content__item:eq('${formatHash}')`).addClass('active');
+                    $(`#content-container-${parseInt(formatHash) + 1}`).addClass('active');
+                    
+                    $('html, body').animate({
+                        'scrollTop': $('.tab-panel').offset().top - 100
+                    }, 900, 'swing')
                 }
-
-                let formatHash = liIndex.toString()
-
-                removeTabActive()
-                console.log(liIndex, formatHash)
-                switchTabContent(liIndex)
-
-                $('.tab-panel').find(`li:eq('${formatHash}')`).addClass('active')
-                $('.tab-content').find(`.tab-content__item:eq('${formatHash}')`).addClass('active');
-                $(`#content-container-${parseInt(formatHash) + 1}`).addClass('active');
-                
-                $('html, body').animate({
-                    'scrollTop': $('.tab-panel').offset().top - 100
-                }, 900, 'swing')
             }
             window.addEventListener('load', updateTab)
             window.addEventListener('hashchange', updateTab)
