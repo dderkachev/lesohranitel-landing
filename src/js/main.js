@@ -132,13 +132,13 @@ $(document).ready(function () {
             }
         });
         
-        new SimpleBar(document.getElementById('tab-panel'));
+        let simpleBar = new SimpleBar(document.getElementById('tab-panel'));
 
         //hash navigation
         if(window.location.hash.length) {
             const updateTab = () => {
                 let hash = window.location.hash
-                let regHash = hash.match(/(subsystem_)(\d{1,2})/)
+                let regHash = hash.match(/(sub)(\d{1,2})/)
                 if (regHash) {
                     let liIndex = regHash[2] - 1
                     let liCount = $('.tab-panel').find('li').length
@@ -150,13 +150,21 @@ $(document).ready(function () {
     
                     let formatHash = liIndex.toString()
     
+                    //Очистка active классов и проверка на доп. контент
                     removeTabActive()
                     switchTabContent(liIndex)
     
+                    //Скролл tab-panel до нужного элемента
                     $('.tab-panel').find(`li:eq('${formatHash}')`).addClass('active')
+                    let scrollEl = simpleBar.getScrollElement()
+                    let length = $('.tab-panel li.active').offset().top - $('.tab-panel li#tab-panel-1').offset().top - $('.tab-panel li#tab-panel-1').height()
+                    scrollEl.scrollTop = length
+
+                    //Поиск контента таба и присвоение active класса
                     $('.tab-content').find(`.tab-content__item:eq('${formatHash}')`).addClass('active');
                     $(`#content-container-${parseInt(formatHash) + 1}`).addClass('active');
-                    
+
+                    //Плавный скролл к контенту табов
                     $('html, body').animate({
                         'scrollTop': $('.tab-panel').offset().top - 100
                     }, 900, 'swing')
