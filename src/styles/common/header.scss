@@ -93,20 +93,29 @@ header {
 }
 
 .header-bottom__description {
+  &-text {
+    max-width: 580px;
+    padding-bottom: 30px;
+  }
+
   p {
     position: relative;
-    max-width: 576px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-left: 30px;
     font-family: $fontFamilyDefault;
     font-size: 19px;
     font-weight: 400;
     color: #e6e6e6;
+
     &::after {
       position: absolute;
       content: '—';
       top: 0;
       left: 0;
+    }
+    
+    span {
+      font-weight: 600;
     }
   }
 }
