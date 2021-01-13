@@ -172,7 +172,11 @@ $(document).ready(function () {
             }
             window.addEventListener('load', updateTab)
             window.addEventListener('hashchange', updateTab)
-        } 
+        }
+        
+        $('.tab-panel li a').on('click', (event) => {
+            event.preventDefault()
+        })
     }
     
     if ($('.feedback').length) {

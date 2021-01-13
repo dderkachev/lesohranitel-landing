@@ -562,7 +562,6 @@
     }
 
     li { 
-        padding: 10px 35px 10px 15px;
         font-family: $fontFamilyDefault;
         font-size: 17px;
         font-weight: 400;
@@ -584,6 +583,12 @@
         &.active {
             border: 5px solid #539423;
             background-color: #ffffff;
+        }
+
+        a {
+            display: block;
+            padding: 10px 35px 10px 15px;
+            color: #212121;
         }
     }
 }
