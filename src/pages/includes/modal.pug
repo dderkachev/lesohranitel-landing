@@ -1,12 +1,12 @@
-mixin input(placeholder, path, id)
-    input(type="text", placeholder = placeholder, id = id)
+mixin input(placeholder, path, id, name)
+    input(type="text", placeholder = placeholder, id = id, name = name)
     img(src = 'img/' + path + '.svg', alt="")
 
 div#overlay.overlay.hide
     div#modal.modal.hide
-        form.modal-submit
+        form.modal-submit#modal-submit
             div.select
-                input(id="modal-select-input", type="text", placeholder="Ваш регион" readonly)
+                input(id="modal-select-input", type="text", placeholder="Ваш регион" name="region" readonly)
                 img(src='img/arrow-black.svg', alt="", id="modal-select-image")
                 div#modal-select-menu-wrapper.select-menu-wrapper
                     ul.select-menu
@@ -96,11 +96,11 @@ div#overlay.overlay.hide
                         li.select-menu__item Чукотский автономный округ
                         li.select-menu__item Ямало-Ненецкий автономный округ
             div.modal-submit__item
-                +input('Ваше имя', 'person-black', 'modal-input-firstname')
+                +input('Ваше имя', 'person-black', 'modal-input-firstname', 'name')
             div.modal-submit__item
-                +input('Ваша почта', 'mail-black', 'modal-input-mail')
+                +input('Ваша почта', 'mail-black', 'modal-input-mail', 'email')
             div.modal-submit__item
-                +input('Ваш телефон', 'phone-black', 'modal-input-phone')
-            button.btn.btn-submit(type='submit') Отправить
+                +input('Ваш телефон', 'phone-black', 'modal-input-phone', 'phone')
+            button.btn.btn-submit(type='submit')#btn-modal-submit Отправить
             div#close
                 img(src="img/close.svg", alt="")

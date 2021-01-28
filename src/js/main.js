@@ -4,6 +4,7 @@ import Swiper from '../local_modules/swiper/swiper-bundle.min'
 import SimpleBar from '../local_modules/simplebar/dist/simplebar.min'
 import yall from '../local_modules/yall-js/dist/yall.min'
 import lightbox from '../local_modules/lightbox2/dist/js/lightbox.min'
+import { event } from 'jquery'
 
 document.addEventListener("DOMContentLoaded", yall);
 
@@ -424,6 +425,58 @@ $(document).ready(function () {
                 modal.classList.add('show')
             })
         })
+    }
+
+    if ($('.modal-submit').length) {
+
+        const region = document.getElementById('modal-select-input')
+
+        //masks
+        let inputPhone = document.getElementById('modal-input-phone')
+        let maskPhoneOption = {
+            mask: '+{7} (000) 000 00 00'
+        }
+
+        let inputEmail = document.getElementById('modal-input-mail')
+
+        let inputFirstname = document.getElementById('modal-input-firstname')
+        let maskFirstnameOption = {
+            mask: /[А-Яа-яЁёA-Za-z]/
+        }
+
+        let maskPhone = IMask(inputPhone, maskPhoneOption)
+        let maskName = IMask(inputFirstname, maskFirstnameOption)
+
+        const btnSubmit = document.getElementById('btn-modal-submit')
+        const modalSubmit = document.getElementById('modal-submit')
+        btnSubmit.addEventListener('click', () => {
+            modalSubmit.addEventListener('submit', (event) => {
+                postData(event)
+            })
+        })
+
+        const postData = (event) => {
+            event.preventDefault()
+
+            let data = {
+                region: region.value,
+                firstName: maskName._value,
+                email: inputEmail.value,
+                phone: maskPhone._value
+            }
+
+            let url = '127.0.0.1/mail.php'
+            
+            let formData = new FormData()
+            formData.append('data', JSON.stringify(data))
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then((data) => console.log(data))
+        }
     }
 });
 
