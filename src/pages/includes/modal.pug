@@ -4,6 +4,8 @@ mixin input(placeholder, path, id, name)
 
 div#overlay.overlay.hide
     div#modal.modal.hide
+        div#error-info
+            p Неверно заполнены поля
         form.modal-submit#modal-submit
             div.select
                 input(id="modal-select-input", type="text", placeholder="Ваш регион" name="region" readonly)
@@ -102,5 +104,9 @@ div#overlay.overlay.hide
             div.modal-submit__item
                 +input('Ваш телефон', 'phone-black', 'modal-input-phone', 'phone')
             button.btn.btn-submit(type='submit')#btn-modal-submit Отправить
-            div#close
-                img(src="img/close.svg", alt="")
+        div#modal--success.modal--success
+            p Данные успешно отправлены
+        div#modal--error.modal--error
+            p Отправить вашу заявку не вышло, позвоните по номеру.
+        div#close-btn
+            img(src="img/close.svg", alt="")

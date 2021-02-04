@@ -364,15 +364,11 @@ $(document).ready(function () {
 
     //modal
     let overlay = document.getElementById('overlay')
-    let close = document.getElementById('close')
+    let close = document.getElementById('close-btn')
     let modal = document.getElementById('modal')
-
-    close.addEventListener('click', () => {
-        modal.classList.remove('show')
-        overlay.classList.remove('show')
-        modal.classList.add('hide')
-        overlay.classList.add('hide')
-    })
+    const modalSubmit = document.getElementById('modal-submit')
+    const modalSuccess = document.getElementById('modal--success')
+    const modalError = document.getElementById('modal--error')
 
     const select = document.getElementById('modal-select-menu-wrapper')
     const selectInput = document.getElementById('modal-select-input')
@@ -423,6 +419,7 @@ $(document).ready(function () {
                 modal.classList.remove('hide')
                 overlay.classList.add('show')
                 modal.classList.add('show')
+                modalSubmit.classList.remove('hide')
             })
         })
     }
@@ -448,15 +445,38 @@ $(document).ready(function () {
         let maskName = IMask(inputFirstname, maskFirstnameOption)
 
         const btnSubmit = document.getElementById('btn-modal-submit')
-        const modalSubmit = document.getElementById('modal-submit')
+        const errorInfo = document.getElementById('error-info')
+
+        close.addEventListener('click', () => {
+            modal.classList.add('hide')
+            overlay.classList.add('hide')
+            modalError.classList.add('hide')
+            modalSuccess.classList.add('hide')
+            errorInfo.classList.remove('hide')
+            modal.classList.remove('show')
+            overlay.classList.remove('show')
+            modalError.classList.remove('show')
+            modalSuccess.classList.remove('show')
+            errorInfo.classList.remove('show')
+            modalSubmit.reset()
+        })
+
         btnSubmit.addEventListener('click', () => {
             modalSubmit.addEventListener('submit', (event) => {
-                postData(event)
+                event.preventDefault()
+
+                let validate = maskPhone._value.length == 18 && maskName._value != '' && region.value != '' && inputEmail.value != ''
+
+                if (validate) {
+                    errorInfo.classList.add('hide')
+                    postData()
+                } else {
+                    errorInfo.classList.add('show')
+                }
             })
         })
 
-        const postData = (event) => {
-            event.preventDefault()
+        const postData = () => {
 
             let data = {
                 region: region.value,
@@ -465,17 +485,26 @@ $(document).ready(function () {
                 phone: maskPhone._value
             }
 
-            let url = '127.0.0.1/mail.php'
-            
-            let formData = new FormData()
-            formData.append('data', JSON.stringify(data))
+            let url = 'contact.php'
 
             fetch(url, {
                 method: 'POST',
-                body: formData
+                body: JSON.stringify(data)
             })
-            .then(response => response.json())
-            .then((data) => console.log(data))
+            .then(response => {
+                if(response.ok) {
+                    modalSubmit.classList.add('hide')
+                    modalSuccess.classList.remove('hide')
+                    modalSuccess.classList.add('show')
+                    modalSubmit.reset()
+                }
+            })
+            .catch(() => {
+                modalSubmit.classList.add('hide')
+                modalError.classList.remove('hide')
+                modalError.classList.add('show')
+                modalSubmit.reset()
+            })
         }
     }
 });
