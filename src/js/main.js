@@ -444,7 +444,6 @@ $(document).ready(function () {
         let maskPhone = IMask(inputPhone, maskPhoneOption)
         let maskName = IMask(inputFirstname, maskFirstnameOption)
 
-        const btnSubmit = document.getElementById('btn-modal-submit')
         const errorInfo = document.getElementById('error-info')
 
         close.addEventListener('click', () => {
@@ -461,28 +460,29 @@ $(document).ready(function () {
             modalSubmit.reset()
         })
 
-        btnSubmit.addEventListener('click', () => {
-            modalSubmit.addEventListener('submit', (event) => {
-                event.preventDefault()
+        modalSubmit.addEventListener('submit', (event) => {
+            event.preventDefault()
 
-                let validate = maskPhone._value.length == 18 && maskName._value != '' && region.value != '' && inputEmail.value != ''
+            let regEmail = /^.+@.+\..+$/
+            let regEmailValid = regEmail.test(inputEmail.value)
 
-                if (validate) {
-                    errorInfo.classList.add('hide')
-                    postData()
-                } else {
-                    errorInfo.classList.add('show')
-                }
-            })
+            let validate = maskPhone.value.length == 18 && maskName.value != '' && region.value != '' && regEmailValid
+
+            if (validate) {
+                errorInfo.classList.add('hide')
+                postData()
+            } else {
+                errorInfo.classList.add('show')
+            }
         })
 
         const postData = () => {
 
             let data = {
                 region: region.value,
-                firstName: maskName._value,
+                firstName: maskName.value,
                 email: inputEmail.value,
-                phone: maskPhone._value
+                phone: maskPhone.value
             }
 
             let url = 'contact.php'
